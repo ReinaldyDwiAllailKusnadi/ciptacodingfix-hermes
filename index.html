@@ -1348,7 +1348,8 @@ if (metricsSection) {
   counterObserver.observe(metricsSection);
 }
 
-// 4. INTERACTIVE 3D TILT EFFECT ON CARDS
+// 4. INTERACTIVE 3D TILT EFFECT ON CARDS (Hover capable devices only)
+if (window.matchMedia('(hover: hover)').matches) {
 const tiltCards = document.querySelectorAll('.tilt-card');
 tiltCards.forEach(card => {
   card.addEventListener('mousemove', (e) => {
@@ -1367,6 +1368,7 @@ tiltCards.forEach(card => {
     card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
   });
 });
+}
 
 // 5. FAQ ACCORDION INTERACTION
 document.querySelectorAll('.faq-btn').forEach(btn => {

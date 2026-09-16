@@ -125,7 +125,7 @@
           Alur Kerja Jelas &amp; <span class="text-[#0062ff]">Transparan di CiptaCoding.</span>
         </h1>
         <p class="text-[#495874] text-base sm:text-lg leading-relaxed max-w-2xl">
-          Proses mudah dan terstruktur sejak awal. Mulai dari diskusi kebutuhan, kesepakatan fitur, pengerjaan bertahap dengan update rutin, hingga serah terima dan pendampingan teknis.
+          Proses mudah dan terstruktur sejak awal. Mulai dari konsultasi kebutuhan, kesepakatan fitur, pengerjaan bertahap dengan update rutin, hingga serah terima dan pendampingan teknis.
         </p>
       </div>
       <div class="lg:col-span-4 grid grid-cols-2 gap-3.5">
@@ -141,7 +141,7 @@
             <span class="material-symbols-outlined text-[22px]">headset_mic</span>
           </div>
           <div class="font-display text-2xl font-extrabold text-[#08143a]">Langsung</div>
-          <p class="text-xs text-[#495874] font-semibold mt-0.5">Diskusi Teknis</p>
+          <p class="text-xs text-[#495874] font-semibold mt-0.5">Konsultasi Teknis</p>
         </div>
       </div>
     </div>
@@ -178,7 +178,7 @@
             <p class="text-xs text-[#495874] mt-1.5 leading-relaxed">Kirimkan gambaran website, aplikasi, atau kendala sistem yang ingin Anda buat via WhatsApp.</p>
           </div>
           <div class="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-[#0062ff]">
-            <span>Diskusi Awal</span>
+            <span>Konsultasi Awal</span>
             <span class="material-symbols-outlined text-[15px] icon-glide">arrow_forward</span>
           </div>
         </div>
@@ -243,7 +243,7 @@
           Langkah 1: Konsultasi &amp; Kebutuhan
         </h4>
         <p class="text-xs sm:text-sm text-[#495874] leading-relaxed" id="stepDetailDesc">
-          Anda cukup mengirimkan gambaran fitur, brief kebutuhan, atau kendala teknis Anda. Keamanan data terjamin dan diskusi awal bebas biaya.
+          Anda cukup mengirimkan gambaran fitur, brief kebutuhan, atau kendala teknis Anda. Keamanan data terjamin dan konsultasi awal bebas biaya.
         </p>
       </div>
       <a class="shrink-0 inline-flex items-center gap-1.5 bg-[#0062ff] hover:bg-[#0051d4] text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs transition-all btn-shimmer btn-hover-lift" href="https://wa.me/6287723057547?text=Halo%20kak%20CiptaCoding,%20saya%20mau%20konsultasi%20project" target="_blank">
@@ -323,7 +323,7 @@
           <div class="bg-black/30 rounded-xl p-4 min-h-[160px] text-[11px] leading-relaxed whitespace-pre-wrap text-blue-200" id="previewText">Halo CiptaCoding, saya Rian Pratama ingin konsultasi pengerjaan sistem:
 - Kategori: Custom Software
 - Target Deadline: 15 November / 2 Minggu
-- Catatan/Ringkasan: Mohon diskusi ketersediaan jadwal pengerjaan.</div>
+- Catatan/Ringkasan: Mohon konsultasi ketersediaan jadwal pengerjaan.</div>
 
           <button type="button" onclick="handleSendWhatsApp()" class="w-full inline-flex items-center justify-center gap-2 bg-[#0062ff] hover:bg-[#0051d4] text-white font-bold text-xs sm:text-sm py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-[0.98] btn-shimmer btn-hover-lift">
             <span class="material-symbols-outlined text-[18px] icon-glide">chat</span>
@@ -443,7 +443,7 @@ function selectStep(step) {
   if (step === 1) {
     iconElem.textContent = 'upload_file';
     titleElem.textContent = 'Langkah 1: Konsultasi & Kebutuhan';
-    descElem.textContent = 'Anda cukup mengirimkan gambaran fitur, brief kebutuhan, atau kendala teknis Anda. Keamanan data terjamin dan diskusi awal bebas biaya.';
+    descElem.textContent = 'Anda cukup mengirimkan gambaran fitur, brief kebutuhan, atau kendala teknis Anda. Keamanan data terjamin dan konsultasi awal bebas biaya.';
   } else if (step === 2) {
     iconElem.textContent = 'handshake';
     titleElem.textContent = 'Langkah 2: Kesepakatan Fitur & Estimasi Waktu';
@@ -478,7 +478,7 @@ function updateLivePreview() {
   const name = document.getElementById('userName').value.trim() || 'Rian Pratama';
   const deadline = document.getElementById('userDeadline').value.trim() || '15 November / 2 Minggu';
   const tech = document.getElementById('techStack').value.trim();
-  const desc = document.getElementById('projectDesc').value.trim() || 'Mohon diskusi ketersediaan jadwal pengerjaan.';
+  const desc = document.getElementById('projectDesc').value.trim() || 'Mohon konsultasi ketersediaan jadwal pengerjaan.';
 
   let message = 'Halo CiptaCoding, saya ' + name + ' ingin konsultasi pengerjaan sistem:\n' +
     '- Kategori: ' + activeCategory + '\n' +

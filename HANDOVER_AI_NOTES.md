@@ -1,7 +1,7 @@
 # DOKUMENTASI LENGKAP SERAH TERIMA PROYEK (HANDOVER UNTUK AI SELANJUTNYA)
 **Proyek:** CiptaCoding - Digital Studio & Software House  
 **Repository GitHub:** `https://github.com/ReinaldyDwiAllailKusnadi/ciptacodingfix.git` (Branch: `main`)  
-**Terakhir Diperbarui:** 13 September 2026
+**Terakhir Diperbarui:** 16 September 2026
 
 ---
 
@@ -19,10 +19,10 @@
 
 ---
 
-## 2. STRUKTUR ARSITEKTUR & SINKRONISASI FILE
-Proyek ini memiliki struktur direktori ganda yang **WAJIB DIJAGA SINKRONISASINYA**:
-1. `ciptacodingfix/` (Subfolder yang menjadi target localhost testing: `http://localhost:8000/ciptacodingfix/`)
-2. `./` (Root directory repositori)
+## 2. STRUKTUR ARSITEKTUR
+Semua file halaman berada langsung di **ROOT direktori repositori** (bukan subfolder). Struktur lama dengan subfolder `ciptacodingfix/` sudah tidak dipakai dan gitlink-nya sudah dibersihkan. Untuk testing lokal: `python3 -m http.server 8000` dari root repo, lalu buka `http://localhost:8000/`.
+
+Tidak ada lagi langkah "copy subfolder ke root" — cukup edit file di root.
 
 ### Daftar 5 File Halaman Utama:
 1. `index.html` → Halaman Utama / Beranda (**MASTER DESIGN SYSTEM / GOLD STANDARD**)
@@ -31,16 +31,8 @@ Proyek ini memiliki struktur direktori ganda yang **WAJIB DIJAGA SINKRONISASINYA
 4. `portofolio.html` → Showroom Proyek & Studi Kasus
 5. `tanya-jawab.html` → Tanya Jawab (FAQ) Lengkap seputar Layanan
 
-### Aturan Sinkronisasi:
-Setiap kali mengedit salah satu file HTML di `ciptacodingfix/`, **SELALU** copy file tersebut ke root directory dan sebaliknya:
-```powershell
-Copy-Item "ciptacodingfix\index.html" -Destination "index.html" -Force
-Copy-Item "ciptacodingfix\layanan.html" -Destination "layanan.html" -Force
-Copy-Item "ciptacodingfix\cara-order.html" -Destination "cara-order.html" -Force
-Copy-Item "ciptacodingfix\portofolio.html" -Destination "portofolio.html" -Force
-Copy-Item "ciptacodingfix\tanya-jawab.html" -Destination "tanya-jawab.html" -Force
-Copy-Item "ciptacodingfix\assets\images\*" -Destination "assets\images\" -Recurse -Force
-```
+### Aturan Edit:
+Edit file HTML langsung di root directory. Pastikan hanya `css/style.css` yang jadi sumber CSS (style.css duplikat di root sudah dihapus).
 
 ---
 
@@ -117,7 +109,16 @@ Semua halaman harus 100% konsisten mengikuti standar `index.html`:
 
 ---
 
-## 6. PANDUAN PENTING UNTUK AI SELANJUTNYA
+## 6. CATATAN PEMBERSIHAN (16 September 2026)
+1. Gitlink `ciptacodingfix` (submodule rusak tanpa .gitmodules) dihapus dari index; folder kosongnya juga dihapus.
+2. `style.css` duplikat di root dihapus — satu-satunya sumber CSS adalah `css/style.css` (isi keduanya identik saat dihapus).
+3. README.md ditulis ulang: referensi "bimbingan tugas/skripsi" dan filter "Skripsi" dihapus (melanggar aturan konten no.1 dan tidak ada di halaman aktual).
+4. Seluruh wording "diskusi" dalam konteks layanan diganti "konsultasi" di 4 halaman.
+5. `index.html`: efek tilt-card kini hanya aktif di perangkat ber-hover (`(hover: hover)` guard), sama seperti 4 halaman lain.
+
+---
+
+## 7. PANDUAN PENTING UNTUK AI SELANJUTNYA
 Jika Anda (AI berikutnya) menerima instruksi atau request lanjutan dari user:
 1. **Pertahankan Estetika & Responsivitas:**
    Desain saat ini sudah melalui audit responsif dan aesthetic audit yang ketat. Jangan pernah merusak grid Tailwind, padding, atau utility classes yang ada.
@@ -125,6 +126,5 @@ Jika Anda (AI berikutnya) menerima instruksi atau request lanjutan dari user:
    Gunakan istilah: *Digital Studio, Software House, Konsultasi, Keamanan Data, Kerahasiaan Proyek, Garansi Perbaikan Bug, Siap Digunakan*.
 3. **Workflow Git Wajib:**
    Jika ada file yang diubah:
-   - Edit file di `ciptacodingfix/`.
-   - Copy file yang diubah ke root `./`.
-   - Commit dan lakukan `git pull --rebase origin main` lalu `git push origin main`.
+   - Edit file di root repository.
+   - Commit, lakukan `git pull --rebase origin main` lalu `git push origin main`.
