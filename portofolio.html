@@ -79,7 +79,7 @@
 <header id="main-header" class="sticky top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#d2dced]/70 shadow-[0_2px_12px_rgba(8,20,58,0.04)] transition-all duration-300">
   <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
     <!-- Brand Logo Sesuai Template Resmi CiptaCoding -->
-    <a class="flex items-center gap-3 focus:outline-none group" href="index.html">
+    <a class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 group" href="index.html">
       <img alt="Logo CiptaCoding" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/images/logo.png"/>
       <span class="font-display text-xl sm:text-2xl text-[#08143a] font-extrabold tracking-tight">Cipta<span class="text-[#0062ff]">Coding</span></span>
     </a>
@@ -94,7 +94,7 @@
         <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">chat</span>
       </a>
       <!-- Hamburger button -->
-      <button id="mobile-menu-btn" aria-label="Buka menu navigasi" aria-expanded="false" class="lg:hidden p-2 text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff] rounded-xl transition-colors focus:outline-none" aria-label="Buka Menu Navigasi">
+      <button id="mobile-menu-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff] rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1">
         <span class="material-symbols-outlined text-[26px]">menu</span>
       </button>
     </div>
@@ -103,7 +103,7 @@
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-[#d2dced] px-4 pt-3 pb-6 space-y-2 shadow-xl">
     <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="index.html">Beranda</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="layanan.html">Layanan</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="cara-order.html">Cara Order</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-bold bg-[#edf4ff] text-[#0062ff]" href="portofolio.html">Portofolio</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="tanya-jawab.html">Tanya Jawab</a>
     <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
-      <a class="btn-shimmer w-full flex items-center justify-center gap-2 bg-[#0062ff] text-white py-3 rounded-xl font-bold text-sm shadow-md" href="https://wa.me/6287723057547?text=Halo%20kak%2C%20saya%20mau%20konsultasi%20kebutuhan%20coding%20di%20CiptaCoding" target="_blank">
+      <a rel="noopener noreferrer" class="btn-shimmer w-full flex items-center justify-center gap-2 bg-[#0062ff] text-white py-3 rounded-xl font-bold text-sm shadow-md" href="https://wa.me/6287723057547?text=Halo%20kak%2C%20saya%20mau%20konsultasi%20kebutuhan%20coding%20di%20CiptaCoding" target="_blank">
         <span class="material-symbols-outlined text-[18px]">chat</span>
         <span>Konsultasi Cepat via WhatsApp</span>
       </a>
@@ -156,7 +156,7 @@
 
     <!-- Filter Tabs Interactive -->
     <div class="flex items-center gap-2 p-1.5 bg-white border border-[#d2dced] rounded-2xl max-w-full overflow-x-auto filter-tabs-scroll shadow-xs mb-8" id="portfolio-filter-container">
-      <button class="filter-btn active-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-[#0062ff] text-white shadow-xs btn-hover-lift shrink-0 whitespace-nowrap" data-filter="all" type="button">
+      <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-[#0062ff] text-white shadow-xs btn-hover-lift shrink-0 whitespace-nowrap" data-filter="all" type="button">
         Semua (6)
       </button>
       <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all text-[#495874] hover:text-[#08143a] hover:bg-slate-50 btn-hover-lift shrink-0 whitespace-nowrap" data-filter="bisnis" type="button">
@@ -178,7 +178,7 @@
       <!-- Project 1: POS & Multi-Outlet System -->
       <article class="portfolio-item tilt-card bg-white rounded-2xl border border-[#d2dced] shadow-xs hover:border-[#0062ff] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group stagger-1" data-category="bisnis it-project">
         <div class="relative h-56 w-full overflow-hidden bg-slate-100">
-          <img alt="POS Multi-Outlet Retail Coffee Shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Vp8NhxU4ZXkuOZm40tpnVnaJU7REsXwd757K4jBzj7yayfAF-CFynG6Y9RlftlGkApxDMndkJV_cy9ugaciJ2QY2NCR_onwOtUBTB16Ae--w23tD_gqdH9YN4zDFAJSCh6OpMGdNRmhCfsnWa-GcE8im-_npWA9bkOT2VRz-IRfWdzspG72XPAjnL6vhazGqwJT8pQCUatLpEjPAp09nD0KDYcWNDEWn5j_qWrLJKJX8CYwS5J49jjl8U"/>
+          <img alt="POS Multi-Outlet Retail Coffee Shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/pos-erp-multi-outlet.svg"/>
           <div class="absolute top-3 left-3">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -226,7 +226,7 @@
       <!-- Project 2: Mobile Presensi GPS & Face Recognition -->
       <article class="portfolio-item tilt-card bg-white rounded-2xl border border-[#d2dced] shadow-xs hover:border-[#0062ff] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group stagger-2" data-category="mobile it-project">
         <div class="relative h-56 w-full overflow-hidden bg-slate-100">
-          <img alt="Mobile Presensi Karyawan GPS &amp; Face Recognition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Xvrtl1Xj5SgJwT_j8O46rWTuIJZ8nzNhWdU5db5y_4Bd7T3JGilU_oWH6ah7fjzP16i2OvyfzY-ud0govG1OsEyD88k4QR7_jBB6mZTmnoTeEPtnC_EZV9Pcc7kkdQPEXZvn5P9ZjNL3y5cJK_BWTHwI8A0BV08Hlqr6y0ZeBS5lE626FMRsXsdHXU8TtUHOj26ck4PuB5GCXeilhqN-eibECQLJSZm3NDkoGOtU_Ji_CdGJjQGJFJ7w"/>
+          <img alt="Mobile Presensi Karyawan GPS &amp; Face Recognition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/web-app-architecture.svg"/>
           <div class="absolute top-3 left-3">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -274,7 +274,7 @@
       <!-- Project 3: Portal Profil & Katalog Ekspor UMKM -->
       <article class="portfolio-item tilt-card bg-white rounded-2xl border border-[#d2dced] shadow-xs hover:border-[#0062ff] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group stagger-3" data-category="website bisnis">
         <div class="relative h-56 w-full overflow-hidden bg-slate-100">
-          <img alt="Portal Profil &amp; Katalog Ekspor UMKM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO6p6MKfqfkvxtU7ypCqZcGsktoK_t6BFnewyx2n3ufG5-i3_EImwsJLs7nqO5FkimMtZHz0gNwEnd6VNisyCe1errN2c4l3KmleKE89xAVNpy-KYZr_fV0LccIAv6O-ootiYrrGAWWv5vQZXE72-3GuClEfj-ttHkPzY1npuKkvxdaaC_QhPJt1lTeATWztiLsaENtI4E_LzVXCnio6t6tkL0t8YdcYAdJ9JIUBAm3biM55dQolGd"/>
+          <img alt="Portal Profil &amp; Katalog Ekspor UMKM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/visualisasi-website-company-profile.jpg"/>
           <div class="absolute top-3 left-3">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
               <span class="material-symbols-outlined text-[14px] text-[#0062ff]">speed</span>
@@ -322,7 +322,7 @@
       <!-- Project 4: Inventory Management & Purchasing DSS -->
       <article class="portfolio-item tilt-card bg-white rounded-2xl border border-[#d2dced] shadow-xs hover:border-[#0062ff] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group stagger-4" data-category="bisnis it-project">
         <div class="relative h-56 w-full overflow-hidden bg-slate-100">
-          <img alt="Inventory Management &amp; Purchasing Decision System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZdg6PLPzsiprjTgimjavMf9-xan4WVLa5JEsiSDWrIDgFhGTtSo7xC1E-fG44bVR4V0O1H_jL9lNl7d_Sftr0zkg1db7MUJpw2bBG7NIXBHzLEv4JzCxN3RXpPTyhry7IpZHouH8-vKgY8stQX8HMfyAmgA2xXMq-o1tYjpx5Dz96heKl9aHvN9hGrwovj0WibKSeKnbi1GPcPDTVq4Ju0nv8Ki8tj9yW7zzySxbehuf7hD3PSzyF"/>
+          <img alt="Inventory Management &amp; Purchasing Decision System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/inventory-management-purchasing-decision.jpg"/>
           <div class="absolute top-3 left-3">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
               <span class="material-symbols-outlined text-[14px] text-[#0062ff]">inventory_2</span>
@@ -370,7 +370,7 @@
       <!-- Project 5: Marketplace Produk Digital & Payment Gateway -->
       <article class="portfolio-item tilt-card bg-white rounded-2xl border border-[#d2dced] shadow-xs hover:border-[#0062ff] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group stagger-5" data-category="bisnis website">
         <div class="relative h-56 w-full overflow-hidden bg-slate-100">
-          <img alt="Marketplace Produk Digital &amp; Payment Gateway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-yiLCtfg7BYBHN8rxDyggfQIDZ7T8Xspm_r6GdAtn8aTIrAPI-m5X8P4a4yH_Q6W5IHFjcXf_Rm1fPjh5BYlYaNq8YKT2jCSf0TorJGpv2YQao76yo98R4qAUHw7IqWnoutUCn0Pspq0mKIGuHKA-ctMTwdnJXc7xVNB9HtdzrP1h6DiPpuALN10D_oJQKDpdgDcOWeqamzxMt_sZT-2tA_t7BGsML9VL_rwZyLakd4kn04k4slFs"/>
+          <img alt="Marketplace Produk Digital &amp; Payment Gateway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/marketplace-produk-digital-payment.jpg"/>
           <div class="absolute top-3 left-3">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
               <span class="material-symbols-outlined text-[14px] text-[#0062ff]">payments</span>
@@ -418,7 +418,7 @@
       <!-- Project 6: AI Computer Vision Engine -->
       <article class="portfolio-item tilt-card bg-white rounded-2xl border border-[#d2dced] shadow-xs hover:border-[#0062ff] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group stagger-6" data-category="it-project">
         <div class="relative h-56 w-full overflow-hidden bg-slate-100">
-          <img alt="AI Computer Vision &amp; Image Classification Engine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqC2PZkbJ_6dvAyDisWX2p8AVoncPhp5XavLc-TDayvTEtDSzRtmBnyAzYoE7XhjQ7qe5Tmpz7HaCop4Pwpt1a1pkHnDqK4Z7jVDB6lMzv88ABCLuTdGy8KVwYD7Gjv1bhgIDCucYPkPmhoDI7wk4qFw_-2XXAmBqt0Gmprc-1qCK39LB8Tv30J1PKm0vs6WQPoTJWtUtB8xa3KtEYVcJedXqb77aaKgIPRYBAGWPbCFWE8f4M6W_F"/>
+          <img alt="AI Computer Vision &amp; Image Classification Engine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/ai-computer-vision-image.jpg"/>
           <div class="absolute top-3 left-3">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
               <span class="material-symbols-outlined text-[14px] text-[#0062ff]">psychology</span>

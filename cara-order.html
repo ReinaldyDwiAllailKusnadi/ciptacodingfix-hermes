@@ -79,7 +79,7 @@
 <header id="main-header" class="sticky top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#d2dced]/70 shadow-[0_2px_12px_rgba(8,20,58,0.04)] transition-all duration-300">
   <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
     <!-- Brand Logo Sesuai Template Resmi CiptaCoding -->
-    <a class="flex items-center gap-3 focus:outline-none group" href="index.html">
+    <a class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 group" href="index.html">
       <img alt="Logo CiptaCoding" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/images/logo.png"/>
       <span class="font-display text-xl sm:text-2xl text-[#08143a] font-extrabold tracking-tight">Cipta<span class="text-[#0062ff]">Coding</span></span>
     </a>
@@ -94,7 +94,7 @@
         <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">chat</span>
       </a>
       <!-- Hamburger button -->
-      <button id="mobile-menu-btn" aria-label="Buka menu navigasi" aria-expanded="false" class="lg:hidden p-2 text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff] rounded-xl transition-colors focus:outline-none" aria-label="Buka Menu Navigasi">
+      <button id="mobile-menu-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff] rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1">
         <span class="material-symbols-outlined text-[26px]">menu</span>
       </button>
     </div>
@@ -103,7 +103,7 @@
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-[#d2dced] px-4 pt-3 pb-6 space-y-2 shadow-xl">
     <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="index.html">Beranda</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="layanan.html">Layanan</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-bold bg-[#edf4ff] text-[#0062ff]" href="cara-order.html">Cara Order</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="portofolio.html">Portofolio</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="tanya-jawab.html">Tanya Jawab</a>
     <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
-      <a class="btn-shimmer w-full flex items-center justify-center gap-2 bg-[#0062ff] text-white py-3 rounded-xl font-bold text-sm shadow-md" href="https://wa.me/6287723057547?text=Halo%20kak%2C%20saya%20mau%20konsultasi%20kebutuhan%20coding%20di%20CiptaCoding" target="_blank">
+      <a rel="noopener noreferrer" class="btn-shimmer w-full flex items-center justify-center gap-2 bg-[#0062ff] text-white py-3 rounded-xl font-bold text-sm shadow-md" href="https://wa.me/6287723057547?text=Halo%20kak%2C%20saya%20mau%20konsultasi%20kebutuhan%20coding%20di%20CiptaCoding" target="_blank">
         <span class="material-symbols-outlined text-[18px]">chat</span>
         <span>Konsultasi Cepat via WhatsApp</span>
       </a>
@@ -177,7 +177,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10" id="workflowSteps">
         <!-- Step 1 -->
-        <div class="step-card tilt-card bg-white rounded-2xl p-5 border-2 border-[#0062ff] shadow-md cursor-pointer transition-all flex flex-col justify-between stagger-1" onclick="selectStep(1)" id="step-card-1">
+        <div class="step-card tilt-card bg-white rounded-2xl p-5 border-2 border-[#0062ff] shadow-md cursor-pointer transition-all flex flex-col justify-between stagger-1" data-step="1" role="button" tabindex="0" aria-pressed="false" id="step-card-1">
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="step-badge w-8 h-8 rounded-xl bg-[#0062ff] text-white font-bold text-sm flex items-center justify-center shadow-xs">1</span>
@@ -193,7 +193,7 @@
         </div>
 
         <!-- Step 2 -->
-        <div class="step-card tilt-card bg-white rounded-2xl p-5 border border-[#d2dced] shadow-xs cursor-pointer transition-all hover:border-[#0062ff] flex flex-col justify-between stagger-2" onclick="selectStep(2)" id="step-card-2">
+        <div class="step-card tilt-card bg-white rounded-2xl p-5 border border-[#d2dced] shadow-xs cursor-pointer transition-all hover:border-[#0062ff] flex flex-col justify-between stagger-2" data-step="2" role="button" tabindex="0" aria-pressed="false" id="step-card-2">
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="step-badge w-8 h-8 rounded-xl bg-[#edf4ff] text-[#0062ff] font-bold text-sm flex items-center justify-center">2</span>
@@ -209,7 +209,7 @@
         </div>
 
         <!-- Step 3 -->
-        <div class="step-card tilt-card bg-white rounded-2xl p-5 border border-[#d2dced] shadow-xs cursor-pointer transition-all hover:border-[#0062ff] flex flex-col justify-between stagger-3" onclick="selectStep(3)" id="step-card-3">
+        <div class="step-card tilt-card bg-white rounded-2xl p-5 border border-[#d2dced] shadow-xs cursor-pointer transition-all hover:border-[#0062ff] flex flex-col justify-between stagger-3" data-step="3" role="button" tabindex="0" aria-pressed="false" id="step-card-3">
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="step-badge w-8 h-8 rounded-xl bg-[#edf4ff] text-[#0062ff] font-bold text-sm flex items-center justify-center">3</span>
@@ -225,7 +225,7 @@
         </div>
 
         <!-- Step 4 -->
-        <div class="step-card tilt-card bg-white rounded-2xl p-5 border border-[#d2dced] shadow-xs cursor-pointer transition-all hover:border-[#0062ff] flex flex-col justify-between stagger-4" onclick="selectStep(4)" id="step-card-4">
+        <div class="step-card tilt-card bg-white rounded-2xl p-5 border border-[#d2dced] shadow-xs cursor-pointer transition-all hover:border-[#0062ff] flex flex-col justify-between stagger-4" data-step="4" role="button" tabindex="0" aria-pressed="false" id="step-card-4">
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="step-badge w-8 h-8 rounded-xl bg-[#edf4ff] text-[#0062ff] font-bold text-sm flex items-center justify-center">4</span>
@@ -255,7 +255,7 @@
           Anda cukup mengirimkan gambaran fitur, brief kebutuhan, atau kendala teknis Anda. Keamanan data terjamin dan konsultasi awal bebas biaya.
         </p>
       </div>
-      <a class="shrink-0 inline-flex items-center gap-1.5 bg-[#0062ff] hover:bg-[#0051d4] text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs transition-all btn-shimmer btn-hover-lift" href="https://wa.me/6287723057547?text=Halo%20kak%20CiptaCoding,%20saya%20mau%20konsultasi%20project" target="_blank">
+      <a rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-1.5 bg-[#0062ff] hover:bg-[#0051d4] text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs transition-all btn-shimmer btn-hover-lift" href="https://wa.me/6287723057547?text=Halo%20kak%20CiptaCoding,%20saya%20mau%20konsultasi%20project" target="_blank">
         <span>Kirim Materi via WA</span>
         <span class="material-symbols-outlined text-[16px] icon-glide">chat</span>
       </a>
@@ -281,16 +281,16 @@
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-[#08143a] mb-2">1. Pilih Kategori Proyek</label>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="categoryButtons">
-              <button type="button" class="category-btn py-2.5 px-3 rounded-xl text-xs font-bold bg-[#0062ff] text-white shadow-xs transition-all" onclick="selectCategory('Custom Software')">
+              <button type="button" class="category-btn py-2.5 px-3 rounded-xl text-xs font-bold bg-[#0062ff] text-white shadow-xs transition-all" data-category-select="Custom Software">
                 Custom Software
               </button>
-              <button type="button" class="category-btn py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#f1f5fb] text-[#08143a] border border-[#d2dced] hover:border-[#0062ff] transition-all" onclick="selectCategory('Website Bisnis')">
+              <button type="button" class="category-btn py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#f1f5fb] text-[#08143a] border border-[#d2dced] hover:border-[#0062ff] transition-all" data-category-select="Website Bisnis">
                 Website Bisnis
               </button>
-              <button type="button" class="category-btn py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#f1f5fb] text-[#08143a] border border-[#d2dced] hover:border-[#0062ff] transition-all" onclick="selectCategory('Fix Bug / API')">
+              <button type="button" class="category-btn py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#f1f5fb] text-[#08143a] border border-[#d2dced] hover:border-[#0062ff] transition-all" data-category-select="Fix Bug / API">
                 Fix Bug / API
               </button>
-              <button type="button" class="category-btn py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#f1f5fb] text-[#08143a] border border-[#d2dced] hover:border-[#0062ff] transition-all" onclick="selectCategory('Project IT')">
+              <button type="button" class="category-btn py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#f1f5fb] text-[#08143a] border border-[#d2dced] hover:border-[#0062ff] transition-all" data-category-select="Project IT">
                 Project IT
               </button>
             </div>
@@ -299,22 +299,22 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-bold text-[#08143a] mb-1.5" for="userName">Nama Anda / Perusahaan</label>
-              <input type="text" id="userName" placeholder="Contoh: Rian (PT Digital Solusi / Personal)" class="w-full bg-[#f8faff] border border-[#d2dced] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#08143a] focus:bg-white focus:outline-none focus:border-[#0062ff] focus:ring-2 focus:ring-[#0062ff]/20 transition-all"/>
+              <input type="text" id="userName" placeholder="Contoh: Rian (PT Digital Solusi / Personal)" class="w-full bg-[#f8faff] border border-[#d2dced] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#08143a] focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 focus:border-[#0062ff] focus:ring-2 focus:ring-[#0062ff]/20 transition-all"/>
             </div>
             <div>
               <label class="block text-xs font-bold text-[#08143a] mb-1.5" for="userDeadline">Target Deadline</label>
-              <input type="text" id="userDeadline" placeholder="Contoh: 15 November / 2 Minggu" class="w-full bg-[#f8faff] border border-[#d2dced] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#08143a] focus:bg-white focus:outline-none focus:border-[#0062ff] focus:ring-2 focus:ring-[#0062ff]/20 transition-all"/>
+              <input type="text" id="userDeadline" placeholder="Contoh: 15 November / 2 Minggu" class="w-full bg-[#f8faff] border border-[#d2dced] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#08143a] focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 focus:border-[#0062ff] focus:ring-2 focus:ring-[#0062ff]/20 transition-all"/>
             </div>
           </div>
 
           <div>
             <label class="block text-xs font-bold text-[#08143a] mb-1.5" for="techStack">Preferensi Bahasa / Framework (Opsional)</label>
-            <input type="text" id="techStack" placeholder="Contoh: Laravel 11, Flutter, Python, React, dll." class="w-full bg-[#f8faff] border border-[#d2dced] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#08143a] focus:bg-white focus:outline-none focus:border-[#0062ff] focus:ring-2 focus:ring-[#0062ff]/20 transition-all"/>
+            <input type="text" id="techStack" placeholder="Contoh: Laravel 11, Flutter, Python, React, dll." class="w-full bg-[#f8faff] border border-[#d2dced] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#08143a] focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 focus:border-[#0062ff] focus:ring-2 focus:ring-[#0062ff]/20 transition-all"/>
           </div>
 
           <div>
             <label class="block text-xs font-bold text-[#08143a] mb-1.5" for="projectDesc">Ringkasan Kebutuhan / Judul</label>
-            <textarea id="projectDesc" rows="3" placeholder="Ceritakan gambaran singkat sistem atau kesulitan yang dihadapi..." class="w-full bg-[#f8faff] border border-[#d2dced] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#08143a] focus:bg-white focus:outline-none focus:border-[#0062ff] focus:ring-2 focus:ring-[#0062ff]/20 transition-all resize-none"></textarea>
+            <textarea id="projectDesc" rows="3" placeholder="Ceritakan gambaran singkat sistem atau kesulitan yang dihadapi..." class="w-full bg-[#f8faff] border border-[#d2dced] rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#08143a] focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 focus:border-[#0062ff] focus:ring-2 focus:ring-[#0062ff]/20 transition-all resize-none"></textarea>
           </div>
         </div>
 
@@ -334,7 +334,7 @@
 - Target Deadline: 15 November / 2 Minggu
 - Catatan/Ringkasan: Mohon konsultasi ketersediaan jadwal pengerjaan.</div>
 
-          <button type="button" onclick="handleSendWhatsApp()" class="w-full inline-flex items-center justify-center gap-2 bg-[#0062ff] hover:bg-[#0051d4] text-white font-bold text-xs sm:text-sm py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-[0.98] btn-shimmer btn-hover-lift">
+          <button type="button" data-action="send-wa" class="w-full inline-flex items-center justify-center gap-2 bg-[#0062ff] hover:bg-[#0051d4] text-white font-bold text-xs sm:text-sm py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-[0.98] btn-shimmer btn-hover-lift">
             <span class="material-symbols-outlined text-[18px] icon-glide">chat</span>
             <span>Kirim Pesan ke WhatsApp</span>
           </button>
@@ -356,7 +356,7 @@
     <div class="space-y-3" id="order-faq-list">
       <!-- FAQ 1 -->
       <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-        <button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+        <button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1" type="button">
           <span class="text-xs sm:text-sm">Berapa lama estimasi pengerjaan project atau sistem?</span>
           <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
         </button>
@@ -369,7 +369,7 @@
 
       <!-- FAQ 2 -->
       <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-        <button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+        <button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1" type="button">
           <span class="text-xs sm:text-sm">Apakah ada sistem pembayaran bertahap (DP)?</span>
           <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
         </button>
@@ -382,7 +382,7 @@
 
       <!-- FAQ 3 -->
       <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-        <button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+        <button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1" type="button">
           <span class="text-xs sm:text-sm">Bagaimana dengan garansi revisi jika ada penyesuaian atau bug?</span>
           <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
         </button>
@@ -412,7 +412,7 @@
           Ide bisnis, source code, data klien, serta detail project Anda tidak akan pernah dibagikan kepada pihak manapun tanpa persetujuan Anda.
         </p>
         <div class="pt-2">
-          <a class="inline-flex items-center justify-center gap-2 bg-[#0062ff] text-white hover:bg-[#0051d4] font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-[0.98] ring-4 ring-[#0062ff]/30 btn-shimmer btn-hover-lift" href="https://wa.me/6287723057547?text=Halo%20kak%20CiptaCoding,%20saya%20mau%20konsultasi%20order%20sekarang" target="_blank">
+          <a rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#0062ff] text-white hover:bg-[#0051d4] font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-[0.98] ring-4 ring-[#0062ff]/30 btn-shimmer btn-hover-lift" href="https://wa.me/6287723057547?text=Halo%20kak%20CiptaCoding,%20saya%20mau%20konsultasi%20order%20sekarang" target="_blank">
             <span class="material-symbols-outlined text-[20px] icon-glide">chat</span>
             <span>Mulai Konsultasi via WhatsApp</span>
           </a>
@@ -513,6 +513,23 @@ function handleSendWhatsApp() {
   const encoded = encodeURIComponent(finalMsg);
   window.open('https://wa.me/6287723057547?text=' + encoded, '_blank');
 }
+
+// Interaksi ter-delegasi (CSP-safe, tanpa inline handler)
+document.querySelectorAll('[data-step]').forEach(el => {
+  const activate = () => {
+    selectStep(parseInt(el.dataset.step, 10));
+    document.querySelectorAll('[data-step]').forEach(s => s.setAttribute('aria-pressed', String(s === el)));
+  };
+  el.addEventListener('click', activate);
+  el.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+  });
+});
+document.querySelectorAll('[data-category-select]').forEach(el => {
+  el.addEventListener('click', () => selectCategory(el.dataset.categorySelect));
+});
+const sendWaBtn = document.querySelector('[data-action="send-wa"]');
+if (sendWaBtn) sendWaBtn.addEventListener('click', handleSendWhatsApp);
 
 // Accordion Logic
 document.querySelectorAll('.faq-btn').forEach(btn => {
