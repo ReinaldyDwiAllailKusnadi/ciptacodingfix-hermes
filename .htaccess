@@ -1,0 +1,13 @@
+# CiptaCoding — redirect HTTP->HTTPS dan www->domain utama
+# Kompatibel Apache 2.4 / LiteSpeed (cPanel shared hosting).
+
+RewriteEngine On
+
+# 1) HTTP -> HTTPS (hanya jika bukan HTTPS dan bukan TLS yang di-terminasi proxy)
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://ciptacoding.com/$1 [R=301,L]
+
+# 2) www.ciptacoding.com -> ciptacoding.com
+RewriteCond %{HTTP_HOST} ^www\.ciptacoding\.com$ [NC]
+RewriteRule ^(.*)$ https://ciptacoding.com/$1 [R=301,L]
