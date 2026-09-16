@@ -49,6 +49,15 @@
   </script>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
   <link href="css/style.css" rel="stylesheet"/>
+  <link rel="canonical" href="https://ciptacoding.com/portofolio.html"/>
+  <meta name="theme-color" content="#08143a"/>
+  <!-- Open Graph / WhatsApp / Telegram share -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="CiptaCoding"/>
+  <meta property="og:title" content="Portofolio &amp; Hasil Pengerjaan - CiptaCoding"/>
+  <meta property="og:description" content="Galeri portofolio website bisnis, aplikasi kasir POS, inventory, mobile app, dan sistem digital yang dikembangkan oleh CiptaCoding."/>
+  <meta property="og:url" content="https://ciptacoding.com/portofolio.html"/>
+  <meta property="og:image" content="https://ciptacoding.com/assets/images/logo-dark-mode.png"/>
 </head>
 <body class="bg-[#f8faff] font-body text-[#08143a] antialiased min-h-screen flex flex-col justify-between selection:bg-[#0062ff] selection:text-white relative">
 
@@ -85,7 +94,7 @@
         <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">chat</span>
       </a>
       <!-- Hamburger button -->
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff] rounded-xl transition-colors focus:outline-none" aria-label="Buka Menu Navigasi">
+      <button id="mobile-menu-btn" aria-label="Buka menu navigasi" aria-expanded="false" class="lg:hidden p-2 text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff] rounded-xl transition-colors focus:outline-none" aria-label="Buka Menu Navigasi">
         <span class="material-symbols-outlined text-[26px]">menu</span>
       </button>
     </div>
@@ -721,6 +730,7 @@ const mobileMenu = document.getElementById('mobile-menu');
 if (mobileBtn && mobileMenu) {
   mobileBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+    mobileBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
     const icon = mobileBtn.querySelector('.material-symbols-outlined');
     if (icon) {
       icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';

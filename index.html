@@ -165,7 +165,40 @@ tailwind.config = {
 </style>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
   <link href="css/style.css" rel="stylesheet"/>
-</head><body class="bg-[#f8faff] font-body text-[#08143a] antialiased min-h-screen flex flex-col justify-between selection:bg-[#0062ff] selection:text-white relative">
+  <link rel="canonical" href="https://ciptacoding.com/index.html"/>
+  <meta name="theme-color" content="#08143a"/>
+  <!-- Open Graph / WhatsApp / Telegram share -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="CiptaCoding"/>
+  <meta property="og:title" content="CiptaCoding - Digital Studio, Software House &amp; Konsultasi IT"/>
+  <meta property="og:description" content="Partner teknologi untuk membangun website, aplikasi, sistem digital bisnis/UMKM, dan solusi project IT dengan kode rapi, terstruktur, dan siap digunakan."/>
+  <meta property="og:url" content="https://ciptacoding.com/index.html"/>
+  <meta property="og:image" content="https://ciptacoding.com/assets/images/logo-dark-mode.png"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "name": "CiptaCoding",
+   "url": "https://ciptacoding.com/",
+   "logo": "https://ciptacoding.com/assets/images/logo.png",
+   "description": "Digital Studio & Software House: pembuatan website, aplikasi bisnis, custom software, aplikasi kasir POS, integrasi API, dan perbaikan bug.",
+   "telephone": "+6287723057547",
+   "sameAs": [
+    "https://www.instagram.com/ciptacoding/"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "name": "CiptaCoding",
+   "url": "https://ciptacoding.com/",
+   "inLanguage": "id-ID"
+  }
+ ]
+}
+</script>
+  </head><body class="bg-[#f8faff] font-body text-[#08143a] antialiased min-h-screen flex flex-col justify-between selection:bg-[#0062ff] selection:text-white relative">
 <!-- Top Bar Promosi / Announcement -->
 <div class="w-full bg-[#08143a] text-white py-2 px-4 text-center text-xs font-semibold flex items-center justify-center gap-2 border-b border-[#0a1744] shadow-sm z-50 relative">
 <div class="flex flex-wrap items-center justify-center gap-2 max-w-7xl mx-auto">
@@ -202,7 +235,7 @@ tailwind.config = {
         <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">chat</span>
       </a>
       <!-- Hamburger button -->
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff] rounded-xl transition-colors focus:outline-none" aria-label="Buka Menu Navigasi">
+      <button id="mobile-menu-btn" aria-label="Buka menu navigasi" aria-expanded="false" class="lg:hidden p-2 text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff] rounded-xl transition-colors focus:outline-none" aria-label="Buka Menu Navigasi">
         <span class="material-symbols-outlined text-[26px]">menu</span>
       </button>
     </div>
@@ -1088,7 +1121,7 @@ tailwind.config = {
 <div class="space-y-2.5" id="faq-list">
 <!-- FAQ 1 -->
 <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-<button class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+<button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
 <span class="text-xs sm:text-sm">Bagaimana cara mulai konsultasi?</span>
 <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
 </button>
@@ -1100,7 +1133,7 @@ tailwind.config = {
 </div>
 <!-- FAQ 2 -->
 <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-<button class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+<button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
 <span class="text-xs sm:text-sm">Apakah keamanan data &amp; project saya terjamin?</span>
 <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
 </button>
@@ -1112,7 +1145,7 @@ tailwind.config = {
 </div>
 <!-- FAQ 3 -->
 <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-<button class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+<button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
 <span class="text-xs sm:text-sm">Bagaimana jika ada revisi atau perbaikan bug?</span>
 <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
 </button>
@@ -1124,7 +1157,7 @@ tailwind.config = {
 </div>
 <!-- FAQ 4 -->
 <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-<button class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+<button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
 <span class="text-xs sm:text-sm">Berapa lama pengerjaannya?</span>
 <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
 </button>
@@ -1136,7 +1169,7 @@ tailwind.config = {
 </div>
 <!-- FAQ 5 -->
 <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-<button class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+<button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
 <span class="text-xs sm:text-sm">Apakah source code dan sistem menjadi hak milik klien?</span>
 <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
 </button>
@@ -1384,6 +1417,7 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
       content.style.maxHeight = content.scrollHeight + 'px';
       chevron.classList.add('rotate-180');
     }
+    document.querySelectorAll('.faq-btn').forEach(b => b.setAttribute('aria-expanded', String(b === btn && !isOpen)));
   });
 });
 
@@ -1417,6 +1451,7 @@ const mobileMenu = document.getElementById('mobile-menu');
 if (mobileBtn && mobileMenu) {
   mobileBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+    mobileBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
     const icon = mobileBtn.querySelector('.material-symbols-outlined');
     if (icon) {
       icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';

@@ -49,6 +49,15 @@
   </script>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
   <link href="css/style.css" rel="stylesheet"/>
+  <link rel="canonical" href="https://ciptacoding.com/cara-order.html"/>
+  <meta name="theme-color" content="#08143a"/>
+  <!-- Open Graph / WhatsApp / Telegram share -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="CiptaCoding"/>
+  <meta property="og:title" content="Alur Pemesanan &amp; Cara Order - CiptaCoding"/>
+  <meta property="og:description" content="Alur pemesanan website dan sistem digital di CiptaCoding. Proses jelas dan transparan dari konsultasi kebutuhan hingga serah terima dan garansi perbaikan bug."/>
+  <meta property="og:url" content="https://ciptacoding.com/cara-order.html"/>
+  <meta property="og:image" content="https://ciptacoding.com/assets/images/logo-dark-mode.png"/>
 </head>
 <body class="bg-[#f8faff] font-body text-[#08143a] antialiased min-h-screen flex flex-col justify-between selection:bg-[#0062ff] selection:text-white relative">
 
@@ -85,7 +94,7 @@
         <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">chat</span>
       </a>
       <!-- Hamburger button -->
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff] rounded-xl transition-colors focus:outline-none" aria-label="Buka Menu Navigasi">
+      <button id="mobile-menu-btn" aria-label="Buka menu navigasi" aria-expanded="false" class="lg:hidden p-2 text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff] rounded-xl transition-colors focus:outline-none" aria-label="Buka Menu Navigasi">
         <span class="material-symbols-outlined text-[26px]">menu</span>
       </button>
     </div>
@@ -347,7 +356,7 @@
     <div class="space-y-3" id="order-faq-list">
       <!-- FAQ 1 -->
       <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-        <button class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+        <button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
           <span class="text-xs sm:text-sm">Berapa lama estimasi pengerjaan project atau sistem?</span>
           <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
         </button>
@@ -360,7 +369,7 @@
 
       <!-- FAQ 2 -->
       <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-        <button class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+        <button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
           <span class="text-xs sm:text-sm">Apakah ada sistem pembayaran bertahap (DP)?</span>
           <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
         </button>
@@ -373,7 +382,7 @@
 
       <!-- FAQ 3 -->
       <div class="bg-white rounded-xl border border-[#d2dced] shadow-2xs overflow-hidden transition-all hover:border-[#0062ff]/60">
-        <button class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
+        <button aria-expanded="false" class="faq-btn w-full p-4 text-left flex items-center justify-between gap-3 font-bold text-[#08143a] hover:text-[#0062ff] transition-colors focus:outline-none" type="button">
           <span class="text-xs sm:text-sm">Bagaimana dengan garansi revisi jika ada penyesuaian atau bug?</span>
           <span class="material-symbols-outlined faq-chevron text-[#0062ff] text-[20px] transition-transform duration-300 ease-out">expand_more</span>
         </button>
@@ -519,6 +528,7 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
       content.style.maxHeight = content.scrollHeight + 'px';
       chevron.classList.add('rotate-180');
     }
+    document.querySelectorAll('.faq-btn').forEach(b => b.setAttribute('aria-expanded', String(b === btn && !isOpen)));
   });
 });
 </script>
@@ -614,6 +624,7 @@ const mobileMenu = document.getElementById('mobile-menu');
 if (mobileBtn && mobileMenu) {
   mobileBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+    mobileBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
     const icon = mobileBtn.querySelector('.material-symbols-outlined');
     if (icon) {
       icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
