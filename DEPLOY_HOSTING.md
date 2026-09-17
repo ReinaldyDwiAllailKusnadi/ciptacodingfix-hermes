@@ -7,33 +7,51 @@ Kondisi terverifikasi (16 September 2026):
 - VPS kerja Hermes (159.223.84.40) BUKAN server hosting — tidak ada akses SSH/FTP/cPanel
   ke hosting idwebhost dari VPS ini.
 
+## Struktur repository (format Laravel-style)
+
+Semua file yang di-serve berada di dalam folder `public/` (docroot), sesuai konvensi
+Laravel. Root repo hanya berisi dokumentasi + folder `public/`:
+
+```
+public/
+  index.html            (beranda)
+  layanan.html
+  cara-order.html
+  portofolio.html
+  tanya-jawab.html
+  sitemap.xml
+  robots.txt
+  .htaccess             (HTTP→HTTPS 301 + www→apex 301)
+  css/style.css
+  assets/images/...     (logo, foto, ilustrasi SVG)
+  assets/icons/...      (ikon tech stack, self-hosted)
+  assets/fonts/
+```
+
+Website 100% statis (HTML/CSS/JS) — tidak butuh PHP, Node.js, database, atau
+build process. File gambar & ikon SEMUA self-hosted (tanpa CDN pihak ketiga
+kecuali Tailwind + Google Fonts).
+
 ## Paket deploy siap unggah
 
-`/root/ciptacoding-deploy.tar.gz` (±1.9 MB) berisi seluruh situs:
-5 halaman HTML, `css/`, `assets/`, `robots.txt`, `sitemap.xml`, `.htaccess`.
+`/root/ciptacoding-deploy.zip` (±2.2 MB) berisi seluruh repo termasuk folder `public/`.
+Isi `public/` = isi document root.
 
-## Langkah deploy manual (butuh akses hosting — salah satu dari):
+## Langkah deploy (dilakukan sendiri via cPanel/hosting)
 
-### Opsi A — cPanel File Manager (paling mudah)
-1. Login cPanel idwebhost (URL & kredensial dari email aktifasi hosting / panel member idwebhost).
-2. Buka **File Manager** → masuk ke folder domain (biasanya `public_html`).
-3. Upload `ciptacoding-deploy.tar.gz` → klik kanan → **Extract**.
-4. Pastikan `index.html` langsung di dalam `public_html` (bukan di dalam subfolder).
+1. Login cPanel idwebhost → **File Manager** → masuk folder domain (`public_html`).
+2. Upload `ciptacoding-deploy.zip` → Extract.
+3. Arahkan document root domain ke folder `public/` yang terekstrak
+   (di cPanel: Subdomains/Domains → Document Root, atau pindahkan isi `public/`
+   langsung ke dalam `public_html` — keduanya valid; yang penting `index.html`
+   berada tepat di document root).
+4. Pastikan `.htaccess` ikut terekstrak (file tersembunyi — aktifkan "Show Hidden
+   Files" di File Manager).
 5. Buka https://ciptacoding.com — selesai.
 
-### Opsi B — FTP
-1. Upload isi tarball (diekstrak dulu di komputer lokal) ke `public_html` via FileZilla.
-2. Sama seperti Opsi A langkah 4-5.
-
-### Opsi C — beri akses SSH/FTP/cPanel ke Hermes
-Jika kredensial hosting diberikan (misal via vault/panel), deploy bisa diotomasi penuh.
-
-## Yang sudah disiapkan & diuji dari sisi repo
-
-- `.htaccess`: HTTP→HTTPS 301 + www→apex 301. Diuji penuh di Apache lokal (9 skenario PASS:
-  redirect apex/www, path & file terjaga, kasus proxy X-Forwarded-Proto tidak menyebabkan loop,
-  HTTPS langsung 200, aset 200). Kompatibel LiteSpeed.
-- `sitemap.xml` (5 URL publik) + `robots.txt` sudah ada di root repo.
+Catatan:
+- `.htaccess`: HTTP→HTTPS 301 + www→apex 301. Diuji penuh di Apache lokal
+  (9 skenario PASS). Kompatibel LiteSpeed.
 - SSL di hosting sudah aktif dari pihak hosting (tidak perlu setup tambahan).
 
 ## Verifikasi setelah upload (jalankan dari VPS Hermes)

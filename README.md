@@ -9,30 +9,35 @@ Website resmi dan landing page CiptaCoding dengan arsitektur bersih, responsive,
 - **Portofolio (`portofolio.html`)**: Galeri studi kasus proyek dengan filter tab dinamis (Bisnis Website, Mobile, IT Project).
 - **Tanya Jawab (`tanya-jawab.html`)**: Pusat bantuan FAQ dengan pencarian live, quick chips, dan accordion expand/collapse.
 
-## 📁 Struktur Folder
+## 📁 Struktur Folder (Laravel-style — semua file yang di-serve ada di `public/`)
 ```text
-├── index.html
-├── layanan.html
-├── cara-order.html
-├── portofolio.html
-├── tanya-jawab.html
+├── public/                 # document root / isi hosting
+│   ├── index.html
+│   ├── layanan.html
+│   ├── cara-order.html
+│   ├── portofolio.html
+│   ├── tanya-jawab.html
+│   ├── sitemap.xml
+│   ├── robots.txt
+│   ├── .htaccess           # HTTP→HTTPS + www→apex (kompatibel LiteSpeed)
+│   ├── css/
+│   │   └── style.css       # Design system tokens (satu-satunya sumber CSS)
+│   └── assets/
+│       ├── images/         # logo.png, logo-dark-mode.png, foto & ilustrasi SVG (self-hosted)
+│       ├── icons/          # ikon tech stack (self-hosted)
+│       └── fonts/
 ├── README.md
 ├── HANDOVER_AI_NOTES.md
-├── .gitignore
-├── css/
-│   └── style.css      # Design system tokens (satu-satunya sumber CSS)
-└── assets/
-    ├── images/        # logo.png, logo-dark-mode.png, mockup UI
-    ├── icons/
-    └── fonts/
+├── DEPLOY_HOSTING.md
+└── .gitignore
 ```
 
-Catatan: situs statis tanpa build step — Tailwind dimuat via CDN, token desain ada di `tailwind.config` inline di tiap halaman plus `css/style.css`.
+Catatan: situs statis tanpa build step — Tailwind dimuat via CDN, token desain ada di `tailwind.config` inline di tiap halaman plus `css/style.css`. Tidak butuh PHP/Node/database.
 
 ## 🛠️ Menjalankan Secara Lokal
-Cukup buka file `index.html` langsung di browser, atau jalankan local web server:
+Jalankan local web server dari folder `public/`:
 ```bash
-python3 -m http.server 8000
+cd public && python3 -m http.server 8000
 ```
 Lalu buka `http://localhost:8000` di browser.
 

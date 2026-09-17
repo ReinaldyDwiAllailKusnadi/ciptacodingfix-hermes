@@ -20,9 +20,9 @@
 ---
 
 ## 2. STRUKTUR ARSITEKTUR
-Semua file halaman berada langsung di **ROOT direktori repositori** (bukan subfolder). Struktur lama dengan subfolder `ciptacodingfix/` sudah tidak dipakai dan gitlink-nya sudah dibersihkan. Untuk testing lokal: `python3 -m http.server 8000` dari root repo, lalu buka `http://localhost:8000/`.
+Semua file halaman berada di folder **`public/`** (docroot, format Laravel-style). Untuk testing lokal: `cd public && python3 -m http.server 8000` (docroot = folder `public/`), lalu buka `http://localhost:8000/`.
 
-Tidak ada lagi langkah "copy subfolder ke root" — cukup edit file di root.
+Tidak ada lagi langkah "copy subfolder ke root" — cukup edit file di dalam `public/`.
 
 ### Daftar 5 File Halaman Utama:
 1. `index.html` → Halaman Utama / Beranda (**MASTER DESIGN SYSTEM / GOLD STANDARD**)
