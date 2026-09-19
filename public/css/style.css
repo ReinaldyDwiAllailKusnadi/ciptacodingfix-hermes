@@ -723,9 +723,10 @@ img, svg, video, iframe {
 
 /* 5. Minimum 44px Touch Targets for Interactive Controls */
 @media (pointer: coarse), (max-width: 768px) {
-  button:not(.text-xs),
-  a.btn-hover-lift,
+  button:not(.text-xs):not(.hidden),
+  a.btn-hover-lift:not(.hidden),
   .filter-tab-btn,
+  .quick-chip,
   .filter-btn,
   .category-btn,
   .faq-toggle,
