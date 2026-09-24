@@ -1,0 +1,112 @@
+{
+  "_AdminLayout-DkkZNynf.js": {
+    "file": "assets/AdminLayout-DkkZNynf.js",
+    "name": "AdminLayout",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-Bs2xwJHu.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/Pages/Auth/Login.vue": {
+    "file": "assets/Login-CTYZIxTL.js",
+    "name": "Login",
+    "src": "resources/js/Pages/Auth/Login.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Clients/Index.vue": {
+    "file": "assets/Index-DOk6f-AA.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Clients/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-DkkZNynf.js"
+    ]
+  },
+  "resources/js/Pages/Dashboard/Index.vue": {
+    "file": "assets/Index-DWy3sdGA.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Dashboard/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-DkkZNynf.js"
+    ]
+  },
+  "resources/js/Pages/Finance/Cashflow/Index.vue": {
+    "file": "assets/Index-BxnF9lkf.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Finance/Cashflow/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_AdminLayout-DkkZNynf.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Finance/Expenses/Index.vue": {
+    "file": "assets/Index-B0b6yOzR.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Finance/Expenses/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-DkkZNynf.js"
+    ]
+  },
+  "resources/js/Pages/Finance/Invoices/Index.vue": {
+    "file": "assets/Index-DBbfcwlH.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Finance/Invoices/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-DkkZNynf.js"
+    ]
+  },
+  "resources/js/Pages/Portfolio/Index.vue": {
+    "file": "assets/Index-CxagCN5d.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Portfolio/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-DkkZNynf.js"
+    ]
+  },
+  "resources/js/Pages/Projects/Index.vue": {
+    "file": "assets/Index-D8-sbTnF.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Projects/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-DkkZNynf.js"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-D0muNV0i.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/Auth/Login.vue",
+      "resources/js/Pages/Clients/Index.vue",
+      "resources/js/Pages/Dashboard/Index.vue",
+      "resources/js/Pages/Finance/Cashflow/Index.vue",
+      "resources/js/Pages/Finance/Expenses/Index.vue",
+      "resources/js/Pages/Finance/Invoices/Index.vue",
+      "resources/js/Pages/Portfolio/Index.vue",
+      "resources/js/Pages/Projects/Index.vue"
+    ],
+    "css": [
+      "assets/app-Bs2xwJHu.css"
+    ]
+  }
+}

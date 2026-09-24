@@ -1,0 +1,172 @@
+[
+    {
+        "id": 1,
+        "code": "PRJ-POS-01",
+        "title": "POS & Multi-Outlet Inventory System",
+        "categories": [
+            "bisnis"
+        ],
+        "categoryLabel": "Sistem Bisnis & POS Kasir",
+        "description": "Otomatisasi pencatatan kasir instan, integrasi printer thermal bluetooth, sinkronisasi stok resep bahan baku terpotong otomatis per transaksi.",
+        "image": "assets/images/pos-cashier-multi-outlet.jpg",
+        "badgeTop": {
+            "text": "Live POS Cashier",
+            "dot": true
+        },
+        "badgeBottom": "Multi-Outlet Cloud",
+        "techStack": [
+            "Laravel 11",
+            "MySQL",
+            "Tailwind CSS",
+            "Thermal Print"
+        ],
+        "highlight": "3 Cabang Sinkron",
+        "highlightIcon": "check_circle",
+        "ctaText": "Tanya Spek",
+        "whatsappText": "Halo CiptaCoding, saya tertarik dengan sistem POS Multi-Outlet",
+        "order": 1
+    },
+    {
+        "id": 2,
+        "code": "MBL-APP-02",
+        "title": "Mobile Presensi Karyawan GPS & Face Recognition",
+        "categories": [
+            "mobile",
+            "it-project"
+        ],
+        "categoryLabel": "Aplikasi Mobile & Presensi Pegawai",
+        "description": "Aplikasi absensi lapangan dengan validasi geofencing anti fake-GPS, verifikasi biometrik wajah OpenCV, dan sinkronisasi laporan presensi real-time.",
+        "image": "assets/images/mobile-presensi-gps-face.jpg",
+        "badgeTop": {
+            "text": "Live Mobile App",
+            "dot": true
+        },
+        "badgeBottom": "Android & iOS Ready",
+        "techStack": [
+            "Flutter",
+            "Flask Python",
+            "OpenCV",
+            "Maps API"
+        ],
+        "highlight": "Anti Fake-GPS & Realtime",
+        "highlightIcon": "verified",
+        "ctaText": "Konsultasi App",
+        "whatsappText": "Halo CiptaCoding, saya tertarik konsultasi aplikasi Mobile Presensi GPS Face Recognition",
+        "order": 2
+    },
+    {
+        "id": 3,
+        "code": "WEB-EXP-03",
+        "title": "Portal Profil & Katalog Ekspor UMKM",
+        "categories": [
+            "website",
+            "bisnis"
+        ],
+        "categoryLabel": "Website Bisnis & Company Profile",
+        "description": "Web showcase interaktif komoditas ekspor kerajinan & rempah nusantara dengan integrasi WhatsApp Direct Order, multi-language, dan performa cepat.",
+        "image": "assets/images/katalog-ekspor-umkm.jpg",
+        "badgeTop": {
+            "text": "SEO Friendly & Cepat",
+            "dot": false,
+            "icon": "speed"
+        },
+        "badgeBottom": "Bilingual ID / EN",
+        "techStack": [
+            "Next.js 14",
+            "Tailwind CSS",
+            "i18n Multi-lang",
+            "Vercel Edge"
+        ],
+        "highlight": "Akses Global Cepat",
+        "highlightIcon": "check_circle",
+        "ctaText": "Konsultasi",
+        "whatsappText": "Halo CiptaCoding, saya tertarik bikin website katalog ekspor",
+        "order": 3
+    },
+    {
+        "id": 4,
+        "code": "SYS-INV-04",
+        "title": "Inventory Management & Purchasing Decision System",
+        "categories": [
+            "bisnis",
+            "it-project"
+        ],
+        "categoryLabel": "Sistem Manajemen & Inventory",
+        "description": "Sistem tata kelola stok gudang terpadu dengan modul rekomendasi restock otomatis (DSS), peringatan batas minimum barang, serta ekspor laporan analitik.",
+        "image": "assets/images/inventory-management-purchasing-decision.jpg",
+        "badgeTop": {
+            "text": "Analitik & Manajemen Stok",
+            "dot": false,
+            "icon": "inventory_2"
+        },
+        "badgeBottom": "Sistem Manajemen Gudang",
+        "techStack": [
+            "Laravel / PHP",
+            "Bootstrap 5",
+            "MySQL",
+            "FPDF / Excel Export"
+        ],
+        "highlight": "Laporan & Restock Otomatis",
+        "highlightIcon": "check_circle",
+        "ctaText": "Konsultasi Sistem",
+        "whatsappText": "Halo CiptaCoding, saya tertarik konsultasi Sistem Inventory Management",
+        "order": 4
+    },
+    {
+        "id": 5,
+        "code": "MKT-DIG-05",
+        "title": "Marketplace Produk Digital & Payment Gateway",
+        "categories": [
+            "bisnis",
+            "website"
+        ],
+        "categoryLabel": "Custom Web App & E-Commerce",
+        "description": "Platform transaksi e-course dan aset desain dengan verifikasi webhook otomatis, pengiriman file via encrypted token link, dan dashboard mitra vendor.",
+        "image": "assets/images/marketplace-produk-digital-payment.jpg",
+        "badgeTop": {
+            "text": "Midtrans Snap Autocheck",
+            "dot": false,
+            "icon": "payments"
+        },
+        "badgeBottom": "Instant Download Secure",
+        "techStack": [
+            "React.js",
+            "Node / Express",
+            "MongoDB",
+            "Midtrans"
+        ],
+        "highlight": "Auto Webhook QRIS",
+        "highlightIcon": "check_circle",
+        "ctaText": "Tanya Proyek",
+        "whatsappText": "Halo CiptaCoding, saya ingin buat aplikasi marketplace payment gateway",
+        "order": 5
+    },
+    {
+        "id": 6,
+        "code": "AI-PRJ-06",
+        "title": "AI Computer Vision & Image Classification Engine",
+        "categories": [
+            "it-project"
+        ],
+        "categoryLabel": "AI & Data Science Engine",
+        "description": "Engine klasifikasi citra cerdas berbasis Deep Learning CNN (ResNet-50) lengkap dengan pipeline REST API FastAPI, inferensi real-time, dan dashboard analitik matriks evaluasi.",
+        "image": "assets/images/ai-computer-vision-image.jpg",
+        "badgeTop": {
+            "text": "Deep Learning CNN Model",
+            "dot": false,
+            "icon": "psychology"
+        },
+        "badgeBottom": "REST API & Web Engine",
+        "techStack": [
+            "Python",
+            "PyTorch",
+            "FastAPI",
+            "Docker"
+        ],
+        "highlight": "Akurasi Model 96.4%",
+        "highlightIcon": "smart_toy",
+        "ctaText": "Uji Model AI",
+        "whatsappText": "Halo CiptaCoding, saya mau konsultasi pembuatan model AI Computer Vision",
+        "order": 6
+    }
+]

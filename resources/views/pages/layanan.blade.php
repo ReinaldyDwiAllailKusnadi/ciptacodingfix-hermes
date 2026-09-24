@@ -1,10 +1,11 @@
+@verbatim
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="id">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Layanan Pembuatan Website &amp; Sistem Digital - CiptaCoding</title>
-  <meta name="description" content="Layanan pembuatan website, aplikasi bisnis, custom software, kasir POS, integrasi API, dan perbaikan bug dengan kode terstruktur dan garansi perbaikan bug."/>
+  <title>Layanan Pembuatan Web, Aplikasi Mobile &amp; Solusi ERP — CiptaCoding</title>
+  <meta name="description" content="Layanan lengkap rekayasa perangkat lunak: Web Development modern, Mobile App iOS &amp; Android, Sistem Bisnis &amp; POS Kasir, hingga integrasi kecerdasan buatan (AI)."/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -49,14 +50,14 @@
   </script>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
   <link href="css/style.css" rel="stylesheet"/>
-  <link rel="canonical" href="https://ciptacoding.com/layanan.html"/>
+  <link rel="canonical" href="https://ciptacoding.com/layanan"/>
   <meta name="theme-color" content="#08143a"/>
   <!-- Open Graph / WhatsApp / Telegram share -->
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="CiptaCoding"/>
-  <meta property="og:title" content="Layanan Pembuatan Website &amp; Sistem Digital - CiptaCoding"/>
-  <meta property="og:description" content="Layanan pembuatan website, aplikasi bisnis, custom software, kasir POS, integrasi API, dan perbaikan bug dengan kode terstruktur dan garansi perbaikan bug."/>
-  <meta property="og:url" content="https://ciptacoding.com/layanan.html"/>
+  <meta property="og:title" content="Layanan Pembuatan Web, Aplikasi Mobile &amp; Solusi ERP — CiptaCoding"/>
+  <meta property="og:description" content="Layanan lengkap rekayasa perangkat lunak: Web Development modern, Mobile App iOS &amp; Android, Sistem Bisnis &amp; POS Kasir, hingga integrasi kecerdasan buatan (AI)."/>
+  <meta property="og:url" content="https://ciptacoding.com/layanan"/>
   <meta property="og:image" content="https://ciptacoding.com/assets/images/logo-dark-mode.png"/>
 </head>
 <body class="bg-[#f8faff] font-body text-[#08143a] antialiased min-h-screen flex flex-col justify-between selection:bg-[#0062ff] selection:text-white relative">
@@ -79,17 +80,17 @@
 <header id="main-header" class="sticky top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#d2dced]/70 shadow-[0_2px_12px_rgba(8,20,58,0.04)] transition-all duration-300">
   <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
     <!-- Brand Logo Sesuai Template Resmi CiptaCoding -->
-    <a class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 group" href="index.html">
+    <a class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 group" href="/">
       <img alt="Logo CiptaCoding" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/images/logo.png"/>
       <span class="font-display text-xl sm:text-2xl text-[#08143a] font-extrabold tracking-tight">Cipta<span class="text-[#0062ff]">Coding</span></span>
     </a>
     <!-- Nav Links Desktop (5 Menu) -->
     <nav class="hidden lg:flex items-center gap-5">
-      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="index.html">Beranda</a>
-      <a class="relative text-sm font-bold text-[#0062ff] bg-[#edf4ff] px-3.5 py-1.5 rounded-xl transition-all shadow-2xs" href="layanan.html">Layanan</a>
-      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="cara-order.html">Cara Order</a>
-      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="portofolio.html">Portofolio</a>
-      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="tanya-jawab.html">Tanya Jawab</a>
+      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/">Beranda</a>
+      <a class="relative text-sm font-bold text-[#0062ff] bg-[#edf4ff] px-3.5 py-1.5 rounded-xl transition-all shadow-2xs" href="/layanan">Layanan</a>
+      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/cara-order">Cara Order</a>
+      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/portofolio">Portofolio</a>
+      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/tanya-jawab">Tanya Jawab</a>
     </nav>
     <!-- Nav Action CTA (Tanpa Icon Instagram) -->
     <div class="flex items-center gap-2 sm:gap-3">
@@ -105,11 +106,11 @@
   </div>
   <!-- Mobile Menu Drawer -->
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-[#d2dced] px-4 pt-3 pb-6 space-y-2 shadow-xl">
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="index.html">Beranda</a>
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-bold bg-[#edf4ff] text-[#0062ff]" href="layanan.html">Layanan</a>
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="cara-order.html">Cara Order</a>
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="portofolio.html">Portofolio</a>
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="tanya-jawab.html">Tanya Jawab</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/">Beranda</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-bold bg-[#edf4ff] text-[#0062ff]" href="/layanan">Layanan</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/cara-order">Cara Order</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/portofolio">Portofolio</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/tanya-jawab">Tanya Jawab</a>
     <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
       <a rel="noopener noreferrer" class="btn-shimmer w-full flex items-center justify-center gap-2 bg-[#0062ff] text-white py-3 rounded-xl font-bold text-sm shadow-md" href="https://wa.me/6287723057547?text=Halo%20kak%2C%20saya%20mau%20konsultasi%20kebutuhan%20coding%20di%20CiptaCoding" target="_blank">
         <span class="material-symbols-outlined text-[18px]">chat</span>
@@ -572,7 +573,7 @@
             <span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">chat</span>
             <span>Konsultasi Sekarang</span>
           </a>
-          <a class="btn-hover-lift w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-white/10 text-white hover:bg-white/20 border border-white/20 font-semibold text-sm px-5 py-3.5 rounded-xl transition-all group" href="cara-order.html">
+          <a class="btn-hover-lift w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-white/10 text-white hover:bg-white/20 border border-white/20 font-semibold text-sm px-5 py-3.5 rounded-xl transition-all group" href="/cara-order">
             <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">rule</span>
             <span>Lihat Alur Pemesanan</span>
           </a>
@@ -634,11 +635,11 @@ filterBtns.forEach(btn => {
       <div class="lg:col-span-3 space-y-2">
         <div class="text-xs uppercase font-extrabold tracking-wider text-slate-200">Menu</div>
         <ul class="space-y-1.5 text-xs text-slate-300">
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="index.html">Beranda</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="layanan.html">Layanan IT</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="cara-order.html">Cara Order</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="portofolio.html">Portofolio</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="tanya-jawab.html">Tanya Jawab</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/">Beranda</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/layanan">Layanan IT</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/cara-order">Cara Order</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/portofolio">Portofolio</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/tanya-jawab">Tanya Jawab</a></li>
         </ul>
       </div>
       <!-- Kontak Resmi -->
@@ -792,3 +793,5 @@ document.querySelectorAll('[data-counter-container], #metrics-section, .counter-
 </body>
 </html>
 
+
+@endverbatim

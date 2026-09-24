@@ -1,45 +1,58 @@
-# CiptaCoding - Digital Studio & Software House
+# CiptaCoding - Digital Studio, Software House & Management ERP
 
-Website resmi dan landing page CiptaCoding dengan arsitektur bersih, responsive, modern, dan performa tinggi.
+Website resmi, landing page, dan sistem manajemen studio terintegrasi CiptaCoding:
+- **Web Publik**: Landing page, portofolio dinamis, katalog layanan, alur pemesanan, dan FAQ.
+- **Sistem Keuangan (Finance ERP)**: Invoicing otomatis (DP, Termin, Pelunasan), Arus Kas Bulanan (Cashflow), Catatan Biaya Pengeluaran (Expenses), Laporan Laba/Rugi.
+- **Manajemen Operasional & CRM**: Database Klien, Status Pengerjaan Proyek IT, Timeline/Deadline, dan Direct Chat WhatsApp.
+- **Showcase CMS**: Pengelolaan katalog portofolio proyek yang otomatis tersinkronisasi ke web publik.
 
-## 🚀 Fitur Utama
-- **Beranda (`index.html`)**: Hero section interaktif, value proposition, statistik pencapaian, running marquee tech stack logo (Devicon), ringkasan layanan, standar keunggulan, ulasan klien, dan WhatsApp CTA.
-- **Layanan (`layanan.html`)**: Katalog 6 layanan utama IT (Custom Software, Debugging & Refactoring, Website Bisnis, Kasir POS & ERP, Fix Bug, Integrasi API/Payment/Cloud) dengan filter tab dinamis dan SLA 4 tahap pengerjaan.
-- **Cara Order (`cara-order.html`)**: 4 langkah alur pemesanan terstruktur + form pembuat draf pesan WhatsApp otomatis.
-- **Portofolio (`portofolio.html`)**: Galeri studi kasus proyek dengan filter tab dinamis (Bisnis Website, Mobile, IT Project).
-- **Tanya Jawab (`tanya-jawab.html`)**: Pusat bantuan FAQ dengan pencarian live, quick chips, dan accordion expand/collapse.
+## 🚀 Teknologi Utama
+- **Backend**: Laravel 11 (PHP 8.5)
+- **Frontend Admin**: Inertia.js v2 + Vue 3 (Single Page Application, snappy tanpa reload)
+- **Styling**: Tailwind CSS v3 + Material Symbols Icons
+- **Visualisasi & Charts**: Chart.js + Vue-ChartJS
+- **Database**: SQLite (Lokal) / MySQL (cPanel Produksi)
+- **Routing Client**: Tighten Ziggy (Vue `route()` helper)
 
-## 📁 Struktur Folder (Laravel-style — semua file yang di-serve ada di `public/`)
-```text
-├── public/                 # document root / isi hosting
-│   ├── index.html
-│   ├── layanan.html
-│   ├── cara-order.html
-│   ├── portofolio.html
-│   ├── tanya-jawab.html
-│   ├── sitemap.xml
-│   ├── robots.txt
-│   ├── .htaccess           # HTTP→HTTPS + www→apex (kompatibel LiteSpeed)
-│   ├── css/
-│   │   └── style.css       # Design system tokens (satu-satunya sumber CSS)
-│   └── assets/
-│       ├── images/         # logo.png, logo-dark-mode.png, foto & ilustrasi SVG (self-hosted)
-│       ├── icons/          # ikon tech stack (self-hosted)
-│       └── fonts/
-├── README.md
-├── HANDOVER_AI_NOTES.md
-├── DEPLOY_HOSTING.md
-└── .gitignore
-```
+## 🛠️ Menjalankan di Lokal
 
-Catatan: situs statis tanpa build step — Tailwind dimuat via CDN, token desain ada di `tailwind.config` inline di tiap halaman plus `css/style.css`. Tidak butuh PHP/Node/database.
-
-## 🛠️ Menjalankan Secara Lokal
-Jalankan local web server dari folder `public/`:
+### 1. Jalankan Server Web (Laravel)
 ```bash
-cd public && python3 -m http.server 8000
+php artisan serve --port=8000
 ```
-Lalu buka `http://localhost:8000` di browser.
+Server akan aktif di: **[http://localhost:8000](http://localhost:8000)**
+
+### 2. Mode Pengembangan Frontend (Hot Reload Vite - Opsional)
+Jika ingin mengubah komponen Vue/Tailwind dengan hot reload:
+```bash
+npm run dev
+```
+Untuk mengompilasi aset produksi:
+```bash
+npm run build
+```
+
+---
+
+## 🔐 Kredensial Login Admin Studio:
+- **URL Login**: [http://localhost:8000/login](http://localhost:8000/login)
+- **Email**: `admin@ciptacoding.com`
+- **Password**: `ciptacoding2026`
+
+---
+
+## 🌐 Halaman Utama Sistem:
+- **Landing Page Publik**: [http://localhost:8000/](http://localhost:8000/) atau [http://localhost:8000/index.html](http://localhost:8000/index.html)
+- **Portofolio Publik**: [http://localhost:8000/portofolio.html](http://localhost:8000/portofolio.html)
+- **Dashboard Studio**: [http://localhost:8000/dashboard](http://localhost:8000/dashboard)
+- **Invoice & Tagihan**: [http://localhost:8000/finance/invoices](http://localhost:8000/finance/invoices)
+- **Catatan Pengeluaran**: [http://localhost:8000/finance/expenses](http://localhost:8000/finance/expenses)
+- **Laporan Arus Kas & Laba Rugi**: [http://localhost:8000/finance/cashflow](http://localhost:8000/finance/cashflow)
+- **Manajemen Proyek**: [http://localhost:8000/projects](http://localhost:8000/projects)
+- **Buku Kontak Klien (CRM)**: [http://localhost:8000/clients](http://localhost:8000/clients)
+- **Portofolio Manager**: [http://localhost:8000/portfolio-manager](http://localhost:8000/portfolio-manager)
+
+---
 
 ## 📞 Kontak
 - WhatsApp: 0877-2305-7547

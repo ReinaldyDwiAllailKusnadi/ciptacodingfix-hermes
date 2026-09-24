@@ -1,13 +1,28 @@
-# CiptaCoding — redirect HTTP->HTTPS dan www->domain utama
-# Kompatibel Apache 2.4 / LiteSpeed (cPanel shared hosting).
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
 
-RewriteEngine On
+    DirectoryIndex index.html index.php
 
-# 1) HTTP -> HTTPS (hanya jika bukan HTTPS dan bukan TLS yang di-terminasi proxy)
-RewriteCond %{HTTPS} !=on
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^(.*)$ https://ciptacoding.com/$1 [R=301,L]
+    RewriteEngine On
 
-# 2) www.ciptacoding.com -> ciptacoding.com
-RewriteCond %{HTTP_HOST} ^www\.ciptacoding\.com$ [NC]
-RewriteRule ^(.*)$ https://ciptacoding.com/$1 [R=301,L]
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # 1) HTTP -> HTTPS (production domain only)
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteCond %{HTTP_HOST} ^ciptacoding\.com$ [NC]
+    RewriteRule ^(.*)$ https://ciptacoding.com/$1 [R=301,L]
+
+    # 2) www.ciptacoding.com -> ciptacoding.com
+    RewriteCond %{HTTP_HOST} ^www\.ciptacoding\.com$ [NC]
+    RewriteRule ^(.*)$ https://ciptacoding.com/$1 [R=301,L]
+
+    # 3) Send Virtual Requests To Laravel Front Controller
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

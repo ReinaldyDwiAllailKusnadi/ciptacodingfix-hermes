@@ -1,10 +1,11 @@
+@verbatim
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="id">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Portofolio &amp; Hasil Pengerjaan - CiptaCoding</title>
-  <meta name="description" content="Galeri portofolio website bisnis, aplikasi kasir POS, inventory, mobile app, dan sistem digital yang dikembangkan oleh CiptaCoding."/>
+  <title>Portofolio Proyek Software, Web App &amp; Mobile — CiptaCoding Studio</title>
+  <meta name="description" content="Katalog showcase proyek live yang telah kami selesaikan: sistem POS cloud, mobile presensi geofencing, katalog ekspor bilingual, dan engine AI computer vision."/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -49,14 +50,14 @@
   </script>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
   <link href="css/style.css" rel="stylesheet"/>
-  <link rel="canonical" href="https://ciptacoding.com/portofolio.html"/>
+  <link rel="canonical" href="https://ciptacoding.com/portofolio"/>
   <meta name="theme-color" content="#08143a"/>
   <!-- Open Graph / WhatsApp / Telegram share -->
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="CiptaCoding"/>
-  <meta property="og:title" content="Portofolio &amp; Hasil Pengerjaan - CiptaCoding"/>
-  <meta property="og:description" content="Galeri portofolio website bisnis, aplikasi kasir POS, inventory, mobile app, dan sistem digital yang dikembangkan oleh CiptaCoding."/>
-  <meta property="og:url" content="https://ciptacoding.com/portofolio.html"/>
+  <meta property="og:title" content="Portofolio Proyek Software, Web App &amp; Mobile — CiptaCoding Studio"/>
+  <meta property="og:description" content="Katalog showcase proyek live yang telah kami selesaikan: sistem POS cloud, mobile presensi geofencing, katalog ekspor bilingual, dan engine AI computer vision."/>
+  <meta property="og:url" content="https://ciptacoding.com/portofolio"/>
   <meta property="og:image" content="https://ciptacoding.com/assets/images/logo-dark-mode.png"/>
 </head>
 <body class="bg-[#f8faff] font-body text-[#08143a] antialiased min-h-screen flex flex-col justify-between selection:bg-[#0062ff] selection:text-white relative">
@@ -79,13 +80,13 @@
 <header id="main-header" class="sticky top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#d2dced]/70 shadow-[0_2px_12px_rgba(8,20,58,0.04)] transition-all duration-300">
   <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
     <!-- Brand Logo Sesuai Template Resmi CiptaCoding -->
-    <a class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 group" href="index.html">
+    <a class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 group" href="/">
       <img alt="Logo CiptaCoding" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/images/logo.png"/>
       <span class="font-display text-xl sm:text-2xl text-[#08143a] font-extrabold tracking-tight">Cipta<span class="text-[#0062ff]">Coding</span></span>
     </a>
     <!-- Nav Links Desktop (5 Menu) -->
     <nav class="hidden lg:flex items-center gap-5">
-      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="index.html">Beranda</a><a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="layanan.html">Layanan</a><a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="cara-order.html">Cara Order</a><a class="relative text-sm font-bold text-[#0062ff] bg-[#edf4ff] px-3.5 py-1.5 rounded-xl transition-all shadow-2xs" href="portofolio.html">Portofolio</a><a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="tanya-jawab.html">Tanya Jawab</a>
+      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/">Beranda</a><a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/layanan">Layanan</a><a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/cara-order">Cara Order</a><a class="relative text-sm font-bold text-[#0062ff] bg-[#edf4ff] px-3.5 py-1.5 rounded-xl transition-all shadow-2xs" href="/portofolio">Portofolio</a><a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/tanya-jawab">Tanya Jawab</a>
     </nav>
     <!-- Nav Action CTA (Tanpa Icon Instagram) -->
     <div class="flex items-center gap-2 sm:gap-3">
@@ -101,7 +102,7 @@
   </div>
   <!-- Mobile Menu Drawer -->
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-[#d2dced] px-4 pt-3 pb-6 space-y-2 shadow-xl">
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="index.html">Beranda</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="layanan.html">Layanan</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="cara-order.html">Cara Order</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-bold bg-[#edf4ff] text-[#0062ff]" href="portofolio.html">Portofolio</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="tanya-jawab.html">Tanya Jawab</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/">Beranda</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/layanan">Layanan</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/cara-order">Cara Order</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-bold bg-[#edf4ff] text-[#0062ff]" href="/portofolio">Portofolio</a><a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/tanya-jawab">Tanya Jawab</a>
     <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
       <a rel="noopener noreferrer" class="btn-shimmer w-full flex items-center justify-center gap-2 bg-[#0062ff] text-white py-3 rounded-xl font-bold text-sm shadow-md" href="https://wa.me/6287723057547?text=Halo%20kak%2C%20saya%20mau%20konsultasi%20kebutuhan%20coding%20di%20CiptaCoding" target="_blank">
         <span class="material-symbols-outlined text-[18px]">chat</span>
@@ -178,7 +179,7 @@
       <!-- Project 1: POS & Multi-Outlet System -->
       <article class="portfolio-item tilt-card bg-white rounded-2xl border border-[#d2dced] shadow-xs hover:border-[#0062ff] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group stagger-1" data-category="bisnis it-project">
         <div class="relative h-56 w-full overflow-hidden bg-slate-100">
-          <img alt="POS Multi-Outlet Retail Coffee Shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/pos-erp-multi-outlet.svg"/>
+          <img alt="POS Multi-Outlet Retail Coffee Shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/pos-cashier-multi-outlet.jpg"/>
           <div class="absolute top-3 left-3">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -226,7 +227,7 @@
       <!-- Project 2: Mobile Presensi GPS & Face Recognition -->
       <article class="portfolio-item tilt-card bg-white rounded-2xl border border-[#d2dced] shadow-xs hover:border-[#0062ff] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group stagger-2" data-category="mobile it-project">
         <div class="relative h-56 w-full overflow-hidden bg-slate-100">
-          <img alt="Mobile Presensi Karyawan GPS &amp; Face Recognition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/web-app-architecture.svg"/>
+          <img alt="Mobile Presensi Karyawan GPS &amp; Face Recognition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/mobile-presensi-gps-face.jpg"/>
           <div class="absolute top-3 left-3">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -274,7 +275,7 @@
       <!-- Project 3: Portal Profil & Katalog Ekspor UMKM -->
       <article class="portfolio-item tilt-card bg-white rounded-2xl border border-[#d2dced] shadow-xs hover:border-[#0062ff] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group stagger-3" data-category="website bisnis">
         <div class="relative h-56 w-full overflow-hidden bg-slate-100">
-          <img alt="Portal Profil &amp; Katalog Ekspor UMKM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/visualisasi-website-company-profile.jpg"/>
+          <img alt="Portal Profil &amp; Katalog Ekspor UMKM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/katalog-ekspor-umkm.jpg"/>
           <div class="absolute top-3 left-3">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
               <span class="material-symbols-outlined text-[14px] text-[#0062ff]">speed</span>
@@ -590,7 +591,7 @@
           <span class="material-symbols-outlined text-[18px] text-[#0062ff] icon-glide">chat</span>
           <span>Konsultasi WhatsApp</span>
         </a>
-        <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm rounded-xl transition-all border border-white/20 btn-hover-lift" href="layanan.html">
+        <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm rounded-xl transition-all border border-white/20 btn-hover-lift" href="/layanan">
           <span>Lihat Semua Layanan</span>
         </a>
       </div>
@@ -657,11 +658,11 @@
       <div class="lg:col-span-3 space-y-2">
         <div class="text-xs uppercase font-extrabold tracking-wider text-slate-200">Menu</div>
         <ul class="space-y-1.5 text-xs text-slate-300">
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="index.html">Beranda</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="layanan.html">Layanan IT</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="cara-order.html">Cara Order</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="portofolio.html">Portofolio</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="tanya-jawab.html">Tanya Jawab</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/">Beranda</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/layanan">Layanan IT</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/cara-order">Cara Order</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/portofolio">Portofolio</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/tanya-jawab">Tanya Jawab</a></li>
         </ul>
       </div>
       <!-- Kontak Resmi -->
@@ -685,7 +686,7 @@
     </div>
     <!-- Bottom Copyright -->
     <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400 border-t border-white/10">
-      <p>© 2025 CiptaCoding. Hak Cipta Dilindungi.</p>
+      <p>© 2025 CiptaCoding. Hak Cipta Dilindungi. <a href="/login" class="hover:text-slate-300 transition-colors ml-1 opacity-70 hover:opacity-100">• Admin Panel</a></p>
       <div class="flex items-center gap-3">
         <span>Source Code &amp; Data Aman</span>
         <span>•</span>
@@ -739,25 +740,175 @@ if (mobileBtn && mobileMenu) {
 }
 
 // 3. 3D Tilt Effect on Cards (Hover capable devices only)
-if (window.matchMedia('(hover: hover)').matches) {
-  document.querySelectorAll('.tilt-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -4;
-      const rotateY = ((x - centerX) / centerX) * 4;
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+function attachTiltEffect() {
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.tilt-card').forEach(card => {
+      card.onmousemove = (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -4;
+        const rotateY = ((x - centerX) / centerX) * 4;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      };
+      card.onmouseleave = () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+      };
     });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+  }
+}
+attachTiltEffect();
+
+// 4. Dynamic Portfolio Renderer & Real-time Filter
+async function initDynamicPortfolio() {
+  const grid = document.getElementById('portfolio-grid');
+  const filterContainer = document.getElementById('portfolio-filter-container');
+  if (!grid) return;
+
+  const endpoint = window.location.pathname.includes('/public/') ? 'api/portofolio.php' : '/api/portofolio';
+
+  let projects = [];
+  try {
+    let res = await fetch(endpoint);
+    if (!res.ok) {
+      res = await fetch('data/portofolio.json');
+    }
+    const json = await res.json();
+    projects = Array.isArray(json) ? json : (json.data || []);
+  } catch (err) {
+    try {
+      const res = await fetch('data/portofolio.json');
+      projects = await res.json();
+    } catch (e) {
+      console.warn('Portfolio fallback: Using embedded HTML cards.');
+      return;
+    }
+  }
+
+  if (!projects || projects.length === 0) return;
+
+  // Render Card HTML
+  grid.innerHTML = projects.map((p, idx) => {
+    const cats = (p.categories || []).join(' ');
+    const badgeTop = p.badgeTop || { text: 'Live Project', dot: true, icon: '' };
+    const badgeIconHtml = badgeTop.dot
+      ? '<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>'
+      : (badgeTop.icon ? `<span class="material-symbols-outlined text-[14px] text-[#0062ff]">${badgeTop.icon}</span>` : '');
+
+    const techHtml = (p.techStack || []).map(t => 
+      `<span class="px-2 py-0.5 rounded-md bg-[#edf4ff] text-[#0062ff] font-mono text-[11px] font-semibold">${t}</span>`
+    ).join('');
+
+    const waText = p.whatsappText || `Halo CiptaCoding, saya tertarik dengan proyek ${p.title}`;
+    const ctaText = p.ctaText || 'Tanya Spek';
+    const highlight = p.highlight || 'Teruji & Siap Pakai';
+    const highlightIcon = p.highlightIcon || 'check_circle';
+
+    return `
+      <article class="portfolio-item tilt-card bg-white rounded-2xl border border-[#d2dced] shadow-xs hover:border-[#0062ff] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group stagger-${(idx % 6) + 1}" data-category="${cats}">
+        <div class="relative h-56 w-full overflow-hidden bg-slate-100">
+          <img alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="${p.image}"/>
+          <div class="absolute top-3 left-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
+              ${badgeIconHtml}
+              <span>${badgeTop.text}</span>
+            </span>
+          </div>
+          <div class="absolute bottom-3 right-3">
+            <span class="px-2.5 py-1 bg-[#08143a]/85 backdrop-blur text-white font-mono text-[11px] rounded-md">
+              ${p.badgeBottom || 'Live Project'}
+            </span>
+          </div>
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col flex-1 justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs text-[#495874]">
+              <span>Kategori: ${p.categoryLabel || 'Sistem Digital'}</span>
+              <span class="font-mono text-[#0062ff] font-bold whitespace-nowrap">${p.code || 'PRJ'}</span>
+            </div>
+            <h2 class="font-display text-lg font-bold text-[#08143a] group-hover:text-[#0062ff] transition-colors leading-snug">
+              ${p.title}
+            </h2>
+            <p class="text-xs sm:text-sm text-[#495874] leading-relaxed">
+              ${p.description || ''}
+            </p>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-slate-100">
+            <div class="flex flex-wrap gap-1.5">
+              ${techHtml}
+            </div>
+            <div class="flex items-center justify-between text-xs text-[#495874] pt-1">
+              <span class="flex items-center gap-1 font-semibold text-emerald-600">
+                <span class="material-symbols-outlined text-[16px]">${highlightIcon}</span> ${highlight}
+              </span>
+              <a class="text-[#0062ff] hover:underline font-bold flex items-center gap-0.5 min-h-[44px]" href="https://wa.me/6287723057547?text=${encodeURIComponent(waText)}" rel="noopener noreferrer" target="_blank">
+                ${ctaText} <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  // Update Filter Tabs Counts
+  if (filterContainer) {
+    const countAll = projects.length;
+    const countBisnis = projects.filter(p => (p.categories || []).includes('bisnis')).length;
+    const countWeb = projects.filter(p => (p.categories || []).includes('website')).length;
+    const countMobile = projects.filter(p => (p.categories || []).includes('mobile')).length;
+    const countIT = projects.filter(p => (p.categories || []).includes('it-project')).length;
+
+    filterContainer.innerHTML = `
+      <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-[#0062ff] text-white shadow-xs btn-hover-lift shrink-0 whitespace-nowrap" data-filter="all" type="button">
+        Semua (${countAll})
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all text-[#495874] hover:text-[#08143a] hover:bg-slate-50 btn-hover-lift shrink-0 whitespace-nowrap" data-filter="bisnis" type="button">
+        Bisnis (${countBisnis})
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all text-[#495874] hover:text-[#08143a] hover:bg-slate-50 btn-hover-lift shrink-0 whitespace-nowrap" data-filter="website" type="button">
+        Website (${countWeb})
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all text-[#495874] hover:text-[#08143a] hover:bg-slate-50 btn-hover-lift shrink-0 whitespace-nowrap" data-filter="mobile" type="button">
+        Mobile (${countMobile})
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all text-[#495874] hover:text-[#08143a] hover:bg-slate-50 btn-hover-lift shrink-0 whitespace-nowrap" data-filter="it-project" type="button">
+        IT Project (${countIT})
+      </button>
+    `;
+
+    // Filter click handler
+    const filterBtns = filterContainer.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.className = 'filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all text-[#495874] hover:text-[#08143a] hover:bg-slate-50 btn-hover-lift shrink-0 whitespace-nowrap';
+        });
+        btn.className = 'filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-[#0062ff] text-white shadow-xs btn-hover-lift shrink-0 whitespace-nowrap';
+
+        const filterVal = btn.getAttribute('data-filter');
+        const items = grid.querySelectorAll('.portfolio-item');
+        items.forEach(card => {
+          const cats = card.getAttribute('data-category') || '';
+          if (filterVal === 'all' || cats.split(' ').includes(filterVal)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
     });
-  });
+  }
+
+  // Re-attach tilt
+  attachTiltEffect();
 }
 
-// 4. Scroll Reveal with Staggering
+initDynamicPortfolio();
+
+// 5. Scroll Reveal with Staggering
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -768,7 +919,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal-init').forEach(el => observer.observe(el));
 
-// 5. Universal Counter Number Count-Up Animation
+// 6. Universal Counter Number Count-Up Animation
 function runCountUp(el) {
   const target = parseFloat(el.getAttribute('data-target') || '0');
   const suffix = el.getAttribute('data-suffix') || '';
@@ -815,3 +966,5 @@ document.querySelectorAll('[data-counter-container], #metrics-section, .counter-
 </body>
 </html>
 
+
+@endverbatim

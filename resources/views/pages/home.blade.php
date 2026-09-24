@@ -1,6 +1,7 @@
+@verbatim
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta name="description" content="Partner teknologi untuk membangun website, aplikasi, sistem digital bisnis/UMKM, dan solusi project IT dengan kode rapi, terstruktur, dan siap digunakan."/><title>CiptaCoding - Digital Studio, Software House &amp; Konsultasi IT</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+<html class="scroll-smooth" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta name="description" content="Partner teknologi software house terpercaya di Indonesia. Jasa pembuatan website, aplikasi mobile, sistem POS kasir multi-outlet, dan custom software berkualitas enterprise."/><title>CiptaCoding — Jasa Pembuatan Website, POS Kasir &amp; Aplikasi Kustom Terpercaya</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
 tailwind.config = {
   darkMode: "class",
   theme: {
@@ -170,8 +171,8 @@ tailwind.config = {
   <!-- Open Graph / WhatsApp / Telegram share -->
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="CiptaCoding"/>
-  <meta property="og:title" content="CiptaCoding - Digital Studio, Software House &amp; Konsultasi IT"/>
-  <meta property="og:description" content="Partner teknologi untuk membangun website, aplikasi, sistem digital bisnis/UMKM, dan solusi project IT dengan kode rapi, terstruktur, dan siap digunakan."/>
+  <meta property="og:title" content="CiptaCoding — Jasa Pembuatan Website, POS Kasir &amp; Aplikasi Kustom Terpercaya"/>
+  <meta property="og:description" content="Partner teknologi software house terpercaya di Indonesia. Jasa pembuatan website, aplikasi mobile, sistem POS kasir multi-outlet, dan custom software berkualitas enterprise."/>
   <meta property="og:url" content="https://ciptacoding.com/"/>
   <meta property="og:image" content="https://ciptacoding.com/assets/images/logo-dark-mode.png"/>
 <script type="application/ld+json">
@@ -216,17 +217,17 @@ tailwind.config = {
 <header id="main-header" class="sticky top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#d2dced]/70 shadow-[0_2px_12px_rgba(8,20,58,0.04)] transition-all duration-300">
 <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
 <!-- Brand Logo Sesuai Template Resmi CiptaCoding -->
-<a class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 group" href="index.html">
+<a class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0062ff] focus-visible:ring-offset-1 group" href="/">
 <img alt="Logo CiptaCoding" class="h-10 w-auto object-contain transition-transform group-hover:scale-105" src="assets/images/logo.png"/>
 <span class="font-display text-xl sm:text-2xl text-[#08143a] font-extrabold tracking-tight">Cipta<span class="text-[#0062ff]">Coding</span></span>
 </a>
     <!-- Nav Links Desktop (5 Menu) -->
     <nav class="hidden lg:flex items-center gap-5">
-      <a class="relative text-sm font-bold text-[#0062ff] bg-[#edf4ff] px-3.5 py-1.5 rounded-xl transition-all shadow-2xs" href="index.html">Beranda</a>
-      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="layanan.html">Layanan</a>
-      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="cara-order.html">Cara Order</a>
-      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="portofolio.html">Portofolio</a>
-      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="tanya-jawab.html">Tanya Jawab</a>
+      <a class="relative text-sm font-bold text-[#0062ff] bg-[#edf4ff] px-3.5 py-1.5 rounded-xl transition-all shadow-2xs" href="/">Beranda</a>
+      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/layanan">Layanan</a>
+      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/cara-order">Cara Order</a>
+      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/portofolio">Portofolio</a>
+      <a class="relative text-sm font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-[#edf4ff]/60 px-3.5 py-1.5 rounded-xl transition-all" href="/tanya-jawab">Tanya Jawab</a>
     </nav>
     <!-- Nav Action CTA (Tanpa Icon Instagram) -->
     <div class="flex items-center gap-2 sm:gap-3">
@@ -242,11 +243,11 @@ tailwind.config = {
   </div>
   <!-- Mobile Menu Drawer -->
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-[#d2dced] px-4 pt-3 pb-6 space-y-2 shadow-xl">
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-bold bg-[#edf4ff] text-[#0062ff]" href="index.html">Beranda</a>
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="layanan.html">Layanan</a>
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="cara-order.html">Cara Order</a>
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="portofolio.html">Portofolio</a>
-    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="tanya-jawab.html">Tanya Jawab</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-bold bg-[#edf4ff] text-[#0062ff]" href="/">Beranda</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/layanan">Layanan</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/cara-order">Cara Order</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/portofolio">Portofolio</a>
+    <a class="block py-2.5 px-3.5 rounded-xl text-sm font-semibold text-[#495874] hover:bg-slate-50 hover:text-[#0062ff] transition-colors" href="/tanya-jawab">Tanya Jawab</a>
     <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
       <a rel="noopener noreferrer" class="btn-shimmer w-full flex items-center justify-center gap-2 bg-[#0062ff] text-white py-3 rounded-xl font-bold text-sm shadow-md" href="https://wa.me/6287723057547?text=Halo%20kak%2C%20saya%20mau%20konsultasi%20kebutuhan%20coding%20di%20CiptaCoding" target="_blank">
         <span class="material-symbols-outlined text-[18px]">chat</span>
@@ -290,7 +291,7 @@ tailwind.config = {
 
 <!-- 2 Pilihan Kategori Utama -->
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 pt-0.5">
-  <a href="layanan.html" class="tilt-card p-2 sm:p-2.5 rounded-xl bg-white border border-[#d2dced] hover:border-[#0062ff] shadow-2xs hover:shadow-xs transition-all group flex items-center gap-2.5">
+  <a href="/layanan" class="tilt-card p-2 sm:p-2.5 rounded-xl bg-white border border-[#d2dced] hover:border-[#0062ff] shadow-2xs hover:shadow-xs transition-all group flex items-center gap-2.5">
     <div class="w-8 h-8 rounded-lg bg-[#edf4ff] text-[#0062ff] flex items-center justify-center shrink-0 group-hover:bg-[#0062ff] group-hover:text-white transition-colors">
       <span class="material-symbols-outlined text-[18px]">storefront</span>
     </div>
@@ -299,7 +300,7 @@ tailwind.config = {
       <div class="text-[10px] text-[#495874] truncate">Website, POS &amp; Aplikasi</div>
     </div>
   </a>
-  <a href="layanan.html" class="tilt-card p-2 sm:p-2.5 rounded-xl bg-white border border-[#d2dced] hover:border-[#0062ff] shadow-2xs hover:shadow-xs transition-all group flex items-center gap-2.5">
+  <a href="/layanan" class="tilt-card p-2 sm:p-2.5 rounded-xl bg-white border border-[#d2dced] hover:border-[#0062ff] shadow-2xs hover:shadow-xs transition-all group flex items-center gap-2.5">
     <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
       <span class="material-symbols-outlined text-[18px]">terminal</span>
     </div>
@@ -316,7 +317,7 @@ tailwind.config = {
 <span class="material-symbols-outlined text-[22px] group-hover:scale-110 transition-transform">chat</span>
 <span>Konsultasi via WhatsApp</span>
 </a>
-<a class="btn-hover-lift inline-flex items-center justify-center gap-2 bg-white border border-[#d2dced] text-[#08143a] hover:bg-[#edf4ff] hover:border-[#0062ff]/40 font-semibold text-sm sm:text-base px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-xs transition-all group" href="portofolio.html">
+<a class="btn-hover-lift inline-flex items-center justify-center gap-2 bg-white border border-[#d2dced] text-[#08143a] hover:bg-[#edf4ff] hover:border-[#0062ff]/40 font-semibold text-sm sm:text-base px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-xs transition-all group" href="/portofolio">
 <span>Lihat Portofolio</span>
 <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
@@ -945,7 +946,7 @@ tailwind.config = {
     <span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800">Sistem Live</span>
   </div>
   <div class="h-44 w-full overflow-hidden relative">
-    <img alt="POS &amp; Multi-Outlet Inventory System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/pos-erp-multi-outlet.svg"/>
+    <img alt="POS &amp; Multi-Outlet Inventory System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/pos-cashier-multi-outlet.jpg"/>
   </div>
 </div>
 <h3 class="font-display text-sm font-bold text-[#08143a] group-hover:text-[#0062ff] transition-colors">POS &amp; Inventory Multi-Cabang</h3>
@@ -977,7 +978,7 @@ tailwind.config = {
     </span>
   </div>
   <div class="h-44 w-full overflow-hidden relative">
-    <img alt="Mobile Presensi GPS &amp; Face Recognition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/web-app-architecture.svg"/>
+    <img alt="Mobile Presensi GPS &amp; Face Recognition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/mobile-presensi-gps-face.jpg"/>
   </div>
 </div>
 <h3 class="font-display text-sm font-bold text-[#08143a] group-hover:text-[#0062ff] transition-colors">Presensi Face Recognition &amp; GPS</h3>
@@ -1012,7 +1013,7 @@ tailwind.config = {
     </span>
   </div>
   <div class="h-44 w-full overflow-hidden relative">
-    <img alt="Portal Profil &amp; Katalog Ekspor UMKM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/portal-profil-katalog-ekspor.jpg"/>
+    <img alt="Portal Profil &amp; Katalog Ekspor UMKM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/images/katalog-ekspor-umkm.jpg"/>
   </div>
 </div>
 <h3 class="font-display text-sm font-bold text-[#08143a] group-hover:text-[#0062ff] transition-colors">Web Katalog Ekspor &amp; Profil UMKM</h3>
@@ -1264,11 +1265,11 @@ tailwind.config = {
       <div class="lg:col-span-3 space-y-2">
         <div class="text-xs uppercase font-extrabold tracking-wider text-slate-200">Menu</div>
         <ul class="space-y-1.5 text-xs text-slate-300">
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="index.html">Beranda</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="layanan.html">Layanan IT</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="cara-order.html">Cara Order</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="portofolio.html">Portofolio</a></li>
-          <li><a class="hover:text-[#60a5fa] transition-colors" href="tanya-jawab.html">Tanya Jawab</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/">Beranda</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/layanan">Layanan IT</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/cara-order">Cara Order</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/portofolio">Portofolio</a></li>
+          <li><a class="hover:text-[#60a5fa] transition-colors" href="/tanya-jawab">Tanya Jawab</a></li>
         </ul>
       </div>
       <!-- Kontak Resmi -->
@@ -1461,3 +1462,4 @@ if (mobileBtn && mobileMenu) {
 
 </script>
 </body></html>
+@endverbatim

@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - Kelola Portofolio | CiptaCoding</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: "#08143a",
+              dark: "#0a1744",
+              blue: "#0062ff",
+              hover: "#0051d4",
+              light: "#edf4ff",
+              subtle: "#f3f7fd"
+            }
+          },
+          fontFamily: {
+            body: ["Plus Jakarta Sans", "sans-serif"],
+            display: ["Plus Jakarta Sans", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-[#f8faff] text-[#08143a] font-body min-h-screen flex flex-col selection:bg-[#0062ff] selection:text-white">
+
+  <!-- ========================================== -->
+  <!-- 1. AUTH SCREEN (LOGIN) -->
+  <!-- ========================================== -->
+  <div id="login-screen" class="fixed inset-0 z-50 bg-[#08143a] flex items-center justify-center p-4">
+    <div class="w-full max-w-md bg-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-100 relative overflow-hidden">
+      <!-- Glow decoration -->
+      <div class="absolute -top-20 -right-20 w-44 h-44 bg-[#0062ff]/20 rounded-full blur-2xl pointer-events-none"></div>
+      
+      <div class="text-center space-y-3 mb-8">
+        <div class="inline-flex items-center justify-center p-3 rounded-2xl bg-[#edf4ff] border border-[#d2dced] shadow-xs">
+          <img src="../assets/images/logo.png" alt="Logo CiptaCoding" class="h-10 w-auto"/>
+        </div>
+        <h1 class="text-2xl font-extrabold tracking-tight text-[#08143a]">
+          Admin <span class="text-[#0062ff]">CiptaCoding</span>
+        </h1>
+        <p class="text-xs text-[#495874]">
+          Masuk untuk mengelola data portofolio &amp; katalog proyek.
+        </p>
+      </div>
+
+      <form id="login-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-[#08143a] mb-1.5">Username</label>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">person</span>
+            <input type="text" id="login-username" required value="admin"
+              class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-[#d2dced] rounded-xl text-sm focus:ring-2 focus:ring-[#0062ff] focus:border-transparent transition-all outline-none"
+              placeholder="Username admin"/>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-[#08143a] mb-1.5">Password</label>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">lock</span>
+            <input type="password" id="login-password" required value="ciptacoding2026"
+              class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-[#d2dced] rounded-xl text-sm focus:ring-2 focus:ring-[#0062ff] focus:border-transparent transition-all outline-none"
+              placeholder="Password admin"/>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-1.5 flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px] text-[#0062ff]">info</span>
+            Default: <span class="font-mono text-slate-600">admin</span> / <span class="font-mono text-slate-600">ciptacoding2026</span>
+          </p>
+        </div>
+
+        <button type="submit" id="btn-login-submit"
+          class="w-full py-3 bg-[#0062ff] hover:bg-[#0051d4] text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 mt-2">
+          <span>Masuk ke Dashboard</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 2. MAIN ADMIN DASHBOARD -->
+  <!-- ========================================== -->
+  <div id="admin-app" class="hidden flex-1 flex flex-col">
+    <!-- Top Navigation Bar -->
+    <header class="glass-nav sticky top-0 z-40 border-b border-[#d2dced]/80 shadow-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        <!-- Logo & Title -->
+        <div class="flex items-center gap-3">
+          <img src="../assets/images/logo.png" alt="Logo CiptaCoding" class="h-8 w-auto"/>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-extrabold text-base tracking-tight text-[#08143a]">Cipta<span class="text-[#0062ff]">Coding</span></span>
+              <span class="px-2 py-0.5 rounded-md bg-[#edf4ff] text-[#0062ff] text-[10px] font-bold uppercase tracking-wider border border-[#0062ff]/20">Admin Panel</span>
+            </div>
+            <p class="text-[11px] text-[#495874] hidden sm:block">Kelola Portofolio &amp; Hasil Pengerjaan</p>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-3">
+          <a href="../portofolio.html" target="_blank"
+            class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#d2dced] text-xs font-semibold text-[#495874] hover:text-[#0062ff] hover:bg-slate-50 transition-colors">
+            <span>Buka Web Publik</span>
+            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+          </a>
+          <button id="btn-add-project"
+            class="inline-flex items-center gap-1.5 bg-[#0062ff] hover:bg-[#0051d4] text-white px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shadow-sm hover:shadow transition-all">
+            <span class="material-symbols-outlined text-[18px]">add_circle</span>
+            <span>Tambah Proyek</span>
+          </button>
+          <button id="btn-logout" title="Keluar"
+            class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-colors">
+            <span class="material-symbols-outlined text-[20px]">logout</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-6">
+
+      <!-- Metrics Cards Row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-[#d2dced] shadow-xs flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-[#edf4ff] text-[#0062ff] flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[22px]">folder_special</span>
+          </div>
+          <div>
+            <div id="stat-total" class="text-xl sm:text-2xl font-extrabold text-[#08143a]">0</div>
+            <div class="text-xs text-[#495874] font-medium">Total Proyek</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-[#d2dced] shadow-xs flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[22px]">storefront</span>
+          </div>
+          <div>
+            <div id="stat-bisnis" class="text-xl sm:text-2xl font-extrabold text-[#08143a]">0</div>
+            <div class="text-xs text-[#495874] font-medium">Sistem Bisnis / POS</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-[#d2dced] shadow-xs flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[22px]">language</span>
+          </div>
+          <div>
+            <div id="stat-website" class="text-xl sm:text-2xl font-extrabold text-[#08143a]">0</div>
+            <div class="text-xs text-[#495874] font-medium">Website Bisnis</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-[#d2dced] shadow-xs flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[22px]">devices</span>
+          </div>
+          <div>
+            <div id="stat-mobile" class="text-xl sm:text-2xl font-extrabold text-[#08143a]">0</div>
+            <div class="text-xs text-[#495874] font-medium">Mobile &amp; IT App</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter, Search & View Controls -->
+      <div class="bg-white p-4 rounded-2xl border border-[#d2dced] shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+        <!-- Search input -->
+        <div class="relative flex-1 max-w-md">
+          <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">search</span>
+          <input type="text" id="admin-search"
+            class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-[#0062ff] focus:border-transparent outline-none transition-all"
+            placeholder="Cari berdasarkan judul, kode, atau tech stack..."/>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0 custom-scroll text-xs">
+          <button data-cat="all" class="admin-filter-pill px-3 py-1.5 rounded-xl font-bold bg-[#0062ff] text-white shadow-2xs whitespace-nowrap">Semua</button>
+          <button data-cat="bisnis" class="admin-filter-pill px-3 py-1.5 rounded-xl font-semibold text-[#495874] hover:bg-slate-100 whitespace-nowrap">Bisnis</button>
+          <button data-cat="website" class="admin-filter-pill px-3 py-1.5 rounded-xl font-semibold text-[#495874] hover:bg-slate-100 whitespace-nowrap">Website</button>
+          <button data-cat="mobile" class="admin-filter-pill px-3 py-1.5 rounded-xl font-semibold text-[#495874] hover:bg-slate-100 whitespace-nowrap">Mobile</button>
+          <button data-cat="it-project" class="admin-filter-pill px-3 py-1.5 rounded-xl font-semibold text-[#495874] hover:bg-slate-100 whitespace-nowrap">IT Project</button>
+        </div>
+      </div>
+
+      <!-- Project List Container -->
+      <div class="bg-white rounded-2xl border border-[#d2dced] shadow-xs overflow-hidden">
+        <!-- Table for Desktop & Cards for Mobile -->
+        <div class="overflow-x-auto custom-scroll">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-50/80 border-b border-[#d2dced] text-[#495874] font-bold text-xs uppercase tracking-wider">
+              <tr>
+                <th class="py-3 px-4 w-16">Preview</th>
+                <th class="py-3 px-4">Proyek &amp; Kode</th>
+                <th class="py-3 px-4">Kategori &amp; Status</th>
+                <th class="py-3 px-4">Tech Stack</th>
+                <th class="py-3 px-4">Highlight</th>
+                <th class="py-3 px-4 text-right w-28">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="project-table-body" class="divide-y divide-slate-100">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden p-12 text-center space-y-3">
+          <div class="w-16 h-16 rounded-full bg-slate-100 text-slate-400 mx-auto flex items-center justify-center">
+            <span class="material-symbols-outlined text-[32px]">inventory_2</span>
+          </div>
+          <h3 class="text-base font-bold text-[#08143a]">Tidak ada proyek yang sesuai</h3>
+          <p class="text-xs text-[#495874]">Coba ubah kata kunci pencarian atau filter kategori.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 3. MODAL FORM: TAMBAH / EDIT PROJECT -->
+  <!-- ========================================== -->
+  <div id="project-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white w-full max-w-4xl rounded-3xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col max-h-[92vh] my-auto">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-[#d2dced] flex items-center justify-between bg-slate-50/50">
+        <div>
+          <h2 id="modal-title" class="text-lg font-bold text-[#08143a]">Tambah Proyek Portofolio</h2>
+          <p class="text-xs text-[#495874]">Isi detail proyek untuk ditampilkan di website CiptaCoding.</p>
+        </div>
+        <button id="btn-close-modal" class="p-1.5 text-slate-400 hover:text-slate-600 rounded-xl hover:bg-slate-100">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Modal Body (Form & Live Preview) -->
+      <form id="project-form" class="flex-1 overflow-y-auto custom-scroll p-6 space-y-5">
+        <input type="hidden" id="form-id"/>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Left Column: Form Inputs -->
+          <div class="space-y-4">
+            <!-- Row: Title & Code -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-bold text-[#08143a] mb-1">Judul Proyek *</label>
+                <input type="text" id="form-title" required
+                  class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-[#0062ff] outline-none"
+                  placeholder="Contoh: POS & Multi-Outlet Inventory"/>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#08143a] mb-1">Kode Proyek</label>
+                <input type="text" id="form-code"
+                  class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs sm:text-sm font-mono text-[#0062ff] focus:ring-2 focus:ring-[#0062ff] outline-none"
+                  placeholder="PRJ-POS-01"/>
+              </div>
+            </div>
+
+            <!-- Categories Checklist -->
+            <div>
+              <label class="block text-xs font-bold text-[#08143a] mb-1.5">Kategori Filter *</label>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <label class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#d2dced] bg-white cursor-pointer hover:bg-slate-50">
+                  <input type="checkbox" name="form-categories" value="bisnis" class="rounded text-[#0062ff] focus:ring-[#0062ff]"/>
+                  <span>Bisnis</span>
+                </label>
+                <label class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#d2dced] bg-white cursor-pointer hover:bg-slate-50">
+                  <input type="checkbox" name="form-categories" value="website" class="rounded text-[#0062ff] focus:ring-[#0062ff]"/>
+                  <span>Website</span>
+                </label>
+                <label class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#d2dced] bg-white cursor-pointer hover:bg-slate-50">
+                  <input type="checkbox" name="form-categories" value="mobile" class="rounded text-[#0062ff] focus:ring-[#0062ff]"/>
+                  <span>Mobile</span>
+                </label>
+                <label class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#d2dced] bg-white cursor-pointer hover:bg-slate-50">
+                  <input type="checkbox" name="form-categories" value="it-project" class="rounded text-[#0062ff] focus:ring-[#0062ff]"/>
+                  <span>IT Project</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Label Kategori Teks -->
+            <div>
+              <label class="block text-xs font-bold text-[#08143a] mb-1">Label Kategori (Teks Display)</label>
+              <input type="text" id="form-category-label"
+                class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-[#0062ff] outline-none"
+                placeholder="Contoh: Sistem Bisnis & POS Kasir"/>
+            </div>
+
+            <!-- Deskripsi Singkat -->
+            <div>
+              <label class="block text-xs font-bold text-[#08143a] mb-1">Deskripsi Singkat</label>
+              <textarea id="form-description" rows="3"
+                class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs sm:text-sm focus:ring-2 focus:ring-[#0062ff] outline-none leading-relaxed"
+                placeholder="Jelaskan fitur utama atau solusi yang diberikan..."></textarea>
+            </div>
+
+            <!-- Tech Stack Tags -->
+            <div>
+              <label class="block text-xs font-bold text-[#08143a] mb-1">Tech Stack (Pisahkan dengan koma)</label>
+              <input type="text" id="form-tech-stack"
+                class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs sm:text-sm font-mono focus:ring-2 focus:ring-[#0062ff] outline-none"
+                placeholder="Laravel 11, MySQL, Tailwind CSS, Thermal Print"/>
+            </div>
+
+            <!-- Badges & Highlight -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-bold text-[#08143a] mb-1">Badge Status Atas</label>
+                <input type="text" id="form-badge-top"
+                  class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs focus:ring-2 focus:ring-[#0062ff] outline-none"
+                  placeholder="Aktif Digunakan Usaha"/>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#08143a] mb-1">Badge Bawah</label>
+                <input type="text" id="form-badge-bottom"
+                  class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs font-mono focus:ring-2 focus:ring-[#0062ff] outline-none"
+                  placeholder="Live POS Cashier"/>
+              </div>
+            </div>
+
+            <!-- Highlight Value & CTA WhatsApp -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-bold text-[#08143a] mb-1">Highlight Benefit</label>
+                <input type="text" id="form-highlight"
+                  class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs text-emerald-600 font-semibold focus:ring-2 focus:ring-[#0062ff] outline-none"
+                  placeholder="3 Cabang Sinkron"/>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#08143a] mb-1">Teks Tombol Aksi</label>
+                <input type="text" id="form-cta-text"
+                  class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs focus:ring-2 focus:ring-[#0062ff] outline-none"
+                  placeholder="Tanya Spek / Konsultasi"/>
+              </div>
+            </div>
+
+            <!-- WhatsApp Query -->
+            <div>
+              <label class="block text-xs font-bold text-[#08143a] mb-1">Pesan Pembuka WhatsApp Klien</label>
+              <input type="text" id="form-whatsapp-text"
+                class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs focus:ring-2 focus:ring-[#0062ff] outline-none"
+                placeholder="Halo CiptaCoding, saya tertarik dengan proyek..."/>
+            </div>
+
+            <!-- Image Selection / Upload -->
+            <div class="space-y-2 pt-2 border-t border-slate-100">
+              <label class="block text-xs font-bold text-[#08143a]">Gambar / Ilustrasi Proyek</label>
+              
+              <!-- Option A: Existing template image -->
+              <div>
+                <label class="text-[11px] text-slate-500 block mb-1">Pilih dari aset bawaan:</label>
+                <select id="form-image-select" class="w-full px-3.5 py-2 bg-slate-50 border border-[#d2dced] rounded-xl text-xs outline-none">
+                  <option value="assets/images/pos-erp-multi-outlet.svg">POS ERP Multi-Outlet (SVG)</option>
+                  <option value="assets/images/web-app-architecture.svg">Web App Architecture / Mobile (SVG)</option>
+                  <option value="assets/images/visualisasi-website-company-profile.jpg">Company Profile Web (JPG)</option>
+                  <option value="assets/images/inventory-management-purchasing-decision.jpg">Inventory Management (JPG)</option>
+                  <option value="assets/images/marketplace-produk-digital-payment.jpg">Marketplace Digital (JPG)</option>
+                  <option value="assets/images/ai-computer-vision-image.jpg">AI Computer Vision (JPG)</option>
+                  <option value="assets/images/portal-profil-katalog-ekspor.jpg">Portal Ekspor (JPG)</option>
+                  <option value="assets/images/api_gateway_integration_ui.jpg">API Gateway UI (JPG)</option>
+                  <option value="custom">-- Upload Gambar Baru dari Komputer --</option>
+                </select>
+              </div>
+
+              <!-- Option B: File upload -->
+              <div id="upload-wrapper" class="hidden">
+                <input type="file" id="form-image-file" accept="image/*" class="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-[#edf4ff] file:text-[#0062ff] hover:file:bg-[#dbe5f5]"/>
+                <input type="hidden" id="form-image-custom-url"/>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Live Card Preview -->
+          <div class="flex flex-col">
+            <span class="text-xs font-bold text-[#495874] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-[#0062ff]">visibility</span>
+              Live Card Preview (Tampilan di Web)
+            </span>
+
+            <div class="bg-slate-50/70 p-4 rounded-2xl border border-dashed border-[#d2dced] flex items-center justify-center flex-1">
+              <!-- The Card -->
+              <article class="w-full max-w-sm bg-white rounded-2xl border border-[#d2dced] shadow-xs overflow-hidden flex flex-col">
+                <div class="relative h-48 w-full overflow-hidden bg-slate-100">
+                  <img id="preview-img" alt="Preview" class="w-full h-full object-cover" src="../assets/images/pos-erp-multi-outlet.svg"/>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 backdrop-blur text-[#0062ff] text-xs font-bold rounded-lg shadow-xs">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      <span id="preview-badge-top">Live Project</span>
+                    </span>
+                  </div>
+                  <div class="absolute bottom-3 right-3">
+                    <span id="preview-badge-bottom" class="px-2.5 py-1 bg-[#08143a]/85 backdrop-blur text-white font-mono text-[11px] rounded-md">
+                      Digital Solution
+                    </span>
+                  </div>
+                </div>
+
+                <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-[#495874]">
+                      <span id="preview-cat-label">Kategori: Sistem Bisnis</span>
+                      <span id="preview-code" class="font-mono text-[#0062ff] font-bold">PRJ-01</span>
+                    </div>
+                    <h3 id="preview-title" class="font-bold text-base text-[#08143a] leading-snug">
+                      Judul Proyek
+                    </h3>
+                    <p id="preview-desc" class="text-xs text-[#495874] leading-relaxed line-clamp-2">
+                      Deskripsi proyek akan tampil di sini.
+                    </p>
+                  </div>
+
+                  <div class="space-y-3 pt-3 border-t border-slate-100">
+                    <div id="preview-tech" class="flex flex-wrap gap-1">
+                      <span class="px-2 py-0.5 rounded-md bg-[#edf4ff] text-[#0062ff] font-mono text-[10px] font-semibold">Tag 1</span>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-[#495874] pt-1">
+                      <span class="flex items-center gap-1 font-semibold text-emerald-600">
+                        <span class="material-symbols-outlined text-[15px]">check_circle</span>
+                        <span id="preview-highlight">Highlight Fitur</span>
+                      </span>
+                      <span id="preview-cta" class="text-[#0062ff] font-bold flex items-center gap-0.5">
+                        Tanya Spek <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="pt-4 border-t border-[#d2dced] flex items-center justify-end gap-3">
+          <button type="button" id="btn-cancel-modal" class="px-4 py-2 rounded-xl text-xs font-semibold text-[#495874] hover:bg-slate-100 transition-colors">
+            Batal
+          </button>
+          <button type="submit" id="btn-save-project" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0062ff] hover:bg-[#0051d4] text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition-all">
+            <span class="material-symbols-outlined text-[18px]">save</span>
+            <span>Simpan Perubahan</span>
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 4. TOAST NOTIFICATION -->
+  <!-- ========================================== -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 rounded-2xl shadow-xl border text-xs sm:text-sm font-bold">
+    <span id="toast-icon" class="material-symbols-outlined text-[20px]">check_circle</span>
+    <span id="toast-msg">Notifikasi</span>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT LOGIC -->
+  <!-- ========================================== -->
+  <script>
+    // State
+    let projects = [];
+    let currentFilter = 'all';
+    let currentSearch = '';
+    const API_PORTFOLIO = window.location.pathname.includes('/public/') ? '../api/portofolio.php' : '/api/portofolio';
+    const API_UPLOAD = window.location.pathname.includes('/public/') ? '../api/upload.php' : '/api/upload';
+    const API_LOGIN = window.location.pathname.includes('/public/') ? '../api/login.php' : '/api/login';
+
+    // DOM Elements
+    const loginScreen = document.getElementById('login-screen');
+    const adminApp = document.getElementById('admin-app');
+    const loginForm = document.getElementById('login-form');
+    const tableBody = document.getElementById('project-table-body');
+    const emptyState = document.getElementById('empty-state');
+    const projectModal = document.getElementById('project-modal');
+    const projectForm = document.getElementById('project-form');
+    const toast = document.getElementById('toast');
+
+    // Toast Helper
+    function showToast(message, type = 'success') {
+      const toastMsg = document.getElementById('toast-msg');
+      const toastIcon = document.getElementById('toast-icon');
+
+      toastMsg.textContent = message;
+      if (type === 'success') {
+        toast.className = 'fixed bottom-6 right-6 z-50 transform translate-y-0 opacity-100 transition-all duration-300 flex items-center gap-2.5 px-4 py-3 rounded-2xl shadow-xl border bg-emerald-50 text-emerald-800 border-emerald-200';
+        toastIcon.textContent = 'check_circle';
+      } else {
+        toast.className = 'fixed bottom-6 right-6 z-50 transform translate-y-0 opacity-100 transition-all duration-300 flex items-center gap-2.5 px-4 py-3 rounded-2xl shadow-xl border bg-red-50 text-red-800 border-red-200';
+        toastIcon.textContent = 'error';
+      }
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3500);
+    }
+
+    // Check Auth on load
+    function checkAuth() {
+      const token = localStorage.getItem('ciptacoding_admin_token');
+      if (token) {
+        loginScreen.classList.add('hidden');
+        adminApp.classList.remove('hidden');
+        loadProjects();
+      } else {
+        loginScreen.classList.remove('hidden');
+        adminApp.classList.add('hidden');
+      }
+    }
+
+    // Login submit
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const u = document.getElementById('login-username').value.trim();
+      const p = document.getElementById('login-password').value.trim();
+
+      try {
+        const res = await fetch(API_LOGIN, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: u, password: p })
+        });
+        const json = await res.json();
+        if (json.success) {
+          localStorage.setItem('ciptacoding_admin_token', json.token);
+          showToast('Login berhasil!');
+          checkAuth();
+        } else {
+          showToast(json.message || 'Login gagal', 'error');
+        }
+      } catch (err) {
+        // Fallback local check if API endpoint not matching
+        if (u === 'admin' && p === 'ciptacoding2026') {
+          localStorage.setItem('ciptacoding_admin_token', 'local-token-' + Date.now());
+          showToast('Login berhasil (offline mode)');
+          checkAuth();
+        } else {
+          showToast('Koneksi gagal atau kredensial salah', 'error');
+        }
+      }
+    });
+
+    // Logout
+    document.getElementById('btn-logout').addEventListener('click', () => {
+      if (confirm('Yakin ingin keluar dari panel admin?')) {
+        localStorage.removeItem('ciptacoding_admin_token');
+        checkAuth();
+      }
+    });
+
+    // Load Projects
+    async function loadProjects() {
+      try {
+        let res = await fetch(API_PORTFOLIO);
+        if (!res.ok) {
+          // fallback to direct json file
+          res = await fetch('../data/portofolio.json');
+        }
+        const json = await res.json();
+        projects = Array.isArray(json) ? json : (json.data || []);
+        updateStats();
+        renderProjects();
+      } catch (err) {
+        console.error('Error loading projects:', err);
+        showToast('Gagal memuat data proyek', 'error');
+      }
+    }
+
+    // Update Stats counters
+    function updateStats() {
+      document.getElementById('stat-total').textContent = projects.length;
+      document.getElementById('stat-bisnis').textContent = projects.filter(p => (p.categories || []).includes('bisnis')).length;
+      document.getElementById('stat-website').textContent = projects.filter(p => (p.categories || []).includes('website')).length;
+      document.getElementById('stat-mobile').textContent = projects.filter(p => (p.categories || []).includes('mobile') || (p.categories || []).includes('it-project')).length;
+    }
+
+    // Render Table/Card Rows
+    function renderProjects() {
+      const q = currentSearch.toLowerCase();
+      const filtered = projects.filter(p => {
+        const matchCat = currentFilter === 'all' || (p.categories && p.categories.includes(currentFilter));
+        const matchQuery = !q || 
+          (p.title && p.title.toLowerCase().includes(q)) ||
+          (p.code && p.code.toLowerCase().includes(q)) ||
+          (p.techStack && p.techStack.join(' ').toLowerCase().includes(q));
+        return matchCat && matchQuery;
+      });
+
+      if (filtered.length === 0) {
+        tableBody.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      tableBody.innerHTML = filtered.map(p => {
+        const imgSrc = p.image.startsWith('assets/') ? `../${p.image}` : p.image;
+        const badgesHtml = (p.categories || []).map(c => `<span class="px-2 py-0.5 rounded-md bg-[#edf4ff] text-[#0062ff] font-semibold text-[10px] uppercase">${c}</span>`).join(' ');
+        const techHtml = (p.techStack || []).map(t => `<span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 font-mono text-[10px]">${t}</span>`).join(' ');
+
+        return `
+          <tr class="hover:bg-slate-50/70 transition-colors">
+            <td class="py-3 px-4">
+              <div class="w-12 h-12 rounded-xl bg-slate-100 overflow-hidden border border-slate-200">
+                <img src="${imgSrc}" alt="${p.title}" class="w-full h-full object-cover"/>
+              </div>
+            </td>
+            <td class="py-3 px-4">
+              <div class="font-mono text-[11px] font-bold text-[#0062ff]">${p.code || 'PRJ'}</div>
+              <div class="font-bold text-[#08143a] text-sm">${p.title}</div>
+              <div class="text-[11px] text-[#495874] line-clamp-1">${p.categoryLabel || ''}</div>
+            </td>
+            <td class="py-3 px-4">
+              <div class="flex flex-wrap gap-1 mb-1">${badgesHtml}</div>
+              <div class="text-[11px] text-slate-500 font-medium">${p.badgeBottom || ''}</div>
+            </td>
+            <td class="py-3 px-4">
+              <div class="flex flex-wrap gap-1 max-w-xs">${techHtml}</div>
+            </td>
+            <td class="py-3 px-4">
+              <div class="text-xs font-semibold text-emerald-600 flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">check_circle</span>
+                <span>${p.highlight || '-'}</span>
+              </div>
+            </td>
+            <td class="py-3 px-4 text-right">
+              <div class="flex items-center justify-end gap-1.5">
+                <button onclick="editProject(${p.id})" title="Edit"
+                  class="p-1.5 rounded-lg text-[#0062ff] hover:bg-[#edf4ff] transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">edit</span>
+                </button>
+                <button onclick="deleteProject(${p.id})" title="Hapus"
+                  class="p-1.5 rounded-lg text-red-500 hover:bg-red-50 transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">delete</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // Filter pills click
+    document.querySelectorAll('.admin-filter-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.admin-filter-pill').forEach(b => {
+          b.className = 'admin-filter-pill px-3 py-1.5 rounded-xl font-semibold text-[#495874] hover:bg-slate-100 whitespace-nowrap';
+        });
+        btn.className = 'admin-filter-pill px-3 py-1.5 rounded-xl font-bold bg-[#0062ff] text-white shadow-2xs whitespace-nowrap';
+        currentFilter = btn.getAttribute('data-cat');
+        renderProjects();
+      });
+    });
+
+    // Search input
+    document.getElementById('admin-search').addEventListener('input', (e) => {
+      currentSearch = e.target.value.trim();
+      renderProjects();
+    });
+
+    // Modal controls
+    const btnAddProject = document.getElementById('btn-add-project');
+    const btnCloseModal = document.getElementById('btn-close-modal');
+    const btnCancelModal = document.getElementById('btn-cancel-modal');
+
+    function openModal(editData = null) {
+      projectForm.reset();
+      document.getElementById('upload-wrapper').classList.add('hidden');
+      document.getElementById('form-image-custom-url').value = '';
+
+      if (editData) {
+        document.getElementById('modal-title').textContent = 'Edit Proyek: ' + editData.title;
+        document.getElementById('form-id').value = editData.id;
+        document.getElementById('form-title').value = editData.title || '';
+        document.getElementById('form-code').value = editData.code || '';
+        document.getElementById('form-category-label').value = editData.categoryLabel || '';
+        document.getElementById('form-description').value = editData.description || '';
+        document.getElementById('form-tech-stack').value = (editData.techStack || []).join(', ');
+        document.getElementById('form-badge-top').value = editData.badgeTop ? editData.badgeTop.text : '';
+        document.getElementById('form-badge-bottom').value = editData.badgeBottom || '';
+        document.getElementById('form-highlight').value = editData.highlight || '';
+        document.getElementById('form-cta-text').value = editData.ctaText || 'Tanya Spek';
+        document.getElementById('form-whatsapp-text').value = editData.whatsappText || '';
+
+        // Categories checkboxes
+        document.querySelectorAll('input[name="form-categories"]').forEach(cb => {
+          cb.checked = (editData.categories || []).includes(cb.value);
+        });
+
+        // Image select
+        const imageSelect = document.getElementById('form-image-select');
+        let matched = false;
+        for (let opt of imageSelect.options) {
+          if (opt.value === editData.image) {
+            imageSelect.value = editData.image;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched && editData.image) {
+          imageSelect.value = 'custom';
+          document.getElementById('upload-wrapper').classList.remove('hidden');
+          document.getElementById('form-image-custom-url').value = editData.image;
+        }
+      } else {
+        document.getElementById('modal-title').textContent = 'Tambah Proyek Baru';
+        document.getElementById('form-id').value = '';
+        const nextId = projects.length > 0 ? Math.max(...projects.map(p => Number(p.id) || 0)) + 1 : 1;
+        document.getElementById('form-code').value = `PRJ-${String(nextId).padStart(2, '0')}`;
+        document.getElementById('form-category-label').value = 'Sistem Bisnis & POS';
+        document.getElementById('form-badge-top').value = 'Live Project';
+        document.getElementById('form-badge-bottom').value = 'Operasional Aktif';
+        document.getElementById('form-highlight').value = 'Siap Digunakan';
+        document.getElementById('form-cta-text').value = 'Tanya Spek';
+        document.querySelectorAll('input[name="form-categories"]')[0].checked = true;
+      }
+
+      updateLivePreview();
+      projectModal.classList.remove('hidden');
+      projectModal.classList.add('flex');
+    }
+
+    function closeModal() {
+      projectModal.classList.add('hidden');
+      projectModal.classList.remove('flex');
+    }
+
+    btnAddProject.addEventListener('click', () => openModal(null));
+    btnCloseModal.addEventListener('click', closeModal);
+    btnCancelModal.addEventListener('click', closeModal);
+
+    // Image select change
+    document.getElementById('form-image-select').addEventListener('change', (e) => {
+      if (e.target.value === 'custom') {
+        document.getElementById('upload-wrapper').classList.remove('hidden');
+      } else {
+        document.getElementById('upload-wrapper').classList.add('hidden');
+      }
+      updateLivePreview();
+    });
+
+    // Image file upload
+    document.getElementById('form-image-file').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = async function(evt) {
+        const base64Data = evt.target.result;
+        try {
+          showToast('Mengunggah gambar...', 'success');
+          const res = await fetch(API_UPLOAD, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ filename: file.name, base64Data: base64Data })
+          });
+          const json = await res.json();
+          if (json.success) {
+            document.getElementById('form-image-custom-url').value = json.url;
+            showToast('Gambar berhasil diunggah!');
+            updateLivePreview();
+          } else {
+            showToast(json.message || 'Gagal upload', 'error');
+          }
+        } catch (err) {
+          // offline fallback: use data uri
+          document.getElementById('form-image-custom-url').value = base64Data;
+          showToast('Gambar lokal siap');
+          updateLivePreview();
+        }
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Live preview update
+    function updateLivePreview() {
+      const title = document.getElementById('form-title').value.trim() || 'Judul Proyek';
+      const code = document.getElementById('form-code').value.trim() || 'PRJ-XX';
+      const catLabel = document.getElementById('form-category-label').value.trim() || 'Kategori Sistem';
+      const desc = document.getElementById('form-description').value.trim() || 'Deskripsi proyek akan tampil di sini.';
+      const badgeTop = document.getElementById('form-badge-top').value.trim() || 'Live Project';
+      const badgeBottom = document.getElementById('form-badge-bottom').value.trim() || 'Digital Solution';
+      const highlight = document.getElementById('form-highlight').value.trim() || 'Fitur Unggulan';
+      const cta = document.getElementById('form-cta-text').value.trim() || 'Tanya Spek';
+      
+      const techVal = document.getElementById('form-tech-stack').value;
+      const techList = techVal ? techVal.split(',').map(s => s.trim()).filter(Boolean) : ['Laravel', 'MySQL'];
+
+      let imageVal = document.getElementById('form-image-select').value;
+      if (imageVal === 'custom') {
+        imageVal = document.getElementById('form-image-custom-url').value || 'assets/images/pos-erp-multi-outlet.svg';
+      }
+      const previewImgSrc = imageVal.startsWith('assets/') ? `../${imageVal}` : imageVal;
+
+      document.getElementById('preview-title').textContent = title;
+      document.getElementById('preview-code').textContent = code;
+      document.getElementById('preview-cat-label').textContent = 'Kategori: ' + catLabel;
+      document.getElementById('preview-desc').textContent = desc;
+      document.getElementById('preview-badge-top').textContent = badgeTop;
+      document.getElementById('preview-badge-bottom').textContent = badgeBottom;
+      document.getElementById('preview-highlight').textContent = highlight;
+      document.getElementById('preview-cta').innerHTML = `${cta} <span class="material-symbols-outlined text-[14px]">arrow_forward</span>`;
+      document.getElementById('preview-img').src = previewImgSrc;
+
+      document.getElementById('preview-tech').innerHTML = techList.map(t => 
+        `<span class="px-2 py-0.5 rounded-md bg-[#edf4ff] text-[#0062ff] font-mono text-[10px] font-semibold">${t}</span>`
+      ).join('');
+    }
+
+    // Attach input listeners for live preview
+    ['form-title', 'form-code', 'form-category-label', 'form-description', 'form-tech-stack', 'form-badge-top', 'form-badge-bottom', 'form-highlight', 'form-cta-text']
+      .forEach(id => document.getElementById(id).addEventListener('input', updateLivePreview));
+
+    // Form Submit (Save / Edit)
+    projectForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const saveBtn = document.getElementById('btn-save-project');
+      saveBtn.disabled = true;
+      saveBtn.classList.add('opacity-70');
+
+      const id = document.getElementById('form-id').value;
+      const selectedCats = Array.from(document.querySelectorAll('input[name="form-categories"]:checked')).map(cb => cb.value);
+      if (selectedCats.length === 0) selectedCats.push('bisnis');
+
+      let imageVal = document.getElementById('form-image-select').value;
+      if (imageVal === 'custom') {
+        imageVal = document.getElementById('form-image-custom-url').value || 'assets/images/pos-erp-multi-outlet.svg';
+      }
+
+      const techVal = document.getElementById('form-tech-stack').value;
+      const techStack = techVal ? techVal.split(',').map(s => s.trim()).filter(Boolean) : [];
+
+      const payload = {
+        title: document.getElementById('form-title').value.trim(),
+        code: document.getElementById('form-code').value.trim(),
+        categories: selectedCats,
+        categoryLabel: document.getElementById('form-category-label').value.trim() || 'Sistem Digital',
+        description: document.getElementById('form-description').value.trim(),
+        image: imageVal,
+        badgeTop: {
+          icon: '',
+          dot: true,
+          text: document.getElementById('form-badge-top').value.trim() || 'Live Project'
+        },
+        badgeBottom: document.getElementById('form-badge-bottom').value.trim() || 'Digital Solution',
+        techStack: techStack,
+        highlight: document.getElementById('form-highlight').value.trim() || 'Siap Digunakan',
+        highlightIcon: 'check_circle',
+        ctaText: document.getElementById('form-cta-text').value.trim() || 'Tanya Spek',
+        whatsappText: document.getElementById('form-whatsapp-text').value.trim() || `Halo CiptaCoding, saya tertarik dengan proyek ${document.getElementById('form-title').value.trim()}`
+      };
+
+      try {
+        let res;
+        if (id) {
+          // Edit (PUT)
+          const endpoint = API_PORTFOLIO.endsWith('.php') ? `${API_PORTFOLIO}?id=${id}` : `${API_PORTFOLIO}/${id}`;
+          res = await fetch(endpoint, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+        } else {
+          // Create (POST)
+          res = await fetch(API_PORTFOLIO, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+        }
+
+        const json = await res.json();
+        if (json.success) {
+          showToast(id ? 'Proyek berhasil diperbarui!' : 'Proyek berhasil ditambahkan!');
+          closeModal();
+          loadProjects();
+        } else {
+          showToast(json.message || 'Gagal menyimpan', 'error');
+        }
+      } catch (err) {
+        console.error(err);
+        showToast('Koneksi server gagal', 'error');
+      } finally {
+        saveBtn.disabled = false;
+        saveBtn.classList.remove('opacity-70');
+      }
+    });
+
+    // Window global functions for table actions
+    window.editProject = function(id) {
+      const p = projects.find(item => String(item.id) === String(id));
+      if (p) openModal(p);
+    };
+
+    window.deleteProject = async function(id) {
+      const p = projects.find(item => String(item.id) === String(id));
+      if (!p) return;
+
+      if (!confirm(`Hapus proyek "${p.title}"? Tindakan ini tidak dapat dibatalkan.`)) {
+        return;
+      }
+
+      try {
+        const endpoint = API_PORTFOLIO.endsWith('.php') ? `${API_PORTFOLIO}?id=${id}` : `${API_PORTFOLIO}/${id}`;
+        const res = await fetch(endpoint, { method: 'DELETE' });
+        const json = await res.json();
+        if (json.success) {
+          showToast('Proyek berhasil dihapus');
+          loadProjects();
+        } else {
+          showToast(json.message || 'Gagal menghapus proyek', 'error');
+        }
+      } catch (err) {
+        showToast('Gagal menghapus dari server', 'error');
+      }
+    };
+
+    // Run on startup
+    checkAuth();
+  </script>
+</body>
+</html>
